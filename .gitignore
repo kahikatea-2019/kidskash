@@ -1,0 +1,8 @@
+# databases
+dev.sqlite3
+
+# Dependency directories
+node_modules/
+
+# Webpack bundles
+bundle.*

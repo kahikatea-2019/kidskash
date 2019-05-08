@@ -1,0 +1,50 @@
+{
+  "name": "kidskash",
+  "version": "1.0.0",
+  "description": "An App that teaches children about decision making and encourages positive interaction between parents and children",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p start:*",
+    "start:server": "node server",
+    "start:client": "webpack",
+    "dev": "run-p server",
+    "dev:server": "nodemon server",
+    "dev-client": "webpack --watch",
+    "knex": "knex --knexfile server/db/knexfile.js",
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kahikatea-2019/kidskash.git"
+  },
+  "author": "Eteroa123, mxbialostocki, Nanitali, Anandani11, PhilipJi1608",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kahikatea-2019/kidskash/issues"
+  },
+  "homepage": "https://github.com/kahikatea-2019/kidskash#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "knex": "^0.16.5",
+    "path": "^0.12.7",
+    "sqlite3": "^4.0.7",
+    "superagent": "^5.0.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.5",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.0",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "supertest": "^4.0.2",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
