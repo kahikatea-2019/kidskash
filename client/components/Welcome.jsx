@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-const Welcome = () => {
-  return (
-    <h2>Welcome</h2>
-  )
+class Welcome extends Component {
+  render () {
+    return (
+      <h2>Welcome</h2>
+    )
+  }
 }
-
-export default Welcome
+function mapStateToProps (state) {
+  return {
+  }
+}
+export default connect(mapStateToProps)(Welcome)
