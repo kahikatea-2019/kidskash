@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Tasklist = () => {
+function Tasklist () {
   return (
     <h2>Task list</h2>
   )
