@@ -7,9 +7,9 @@
     "start": "start:*",
     "start:server": "node server",
     "start:client": "webpack",
-    "dev": "node server & webpack --watch",
+    "dev": "run-p dev:*",
     "dev:server": "nodemon server",
-    "dev-client": "webpack --watch",
+    "dev:client": "webpack --watch",
     "knex": "knex --knexfile server/db/knexfile.js",
     "test": "jest --watchAll"
   },
