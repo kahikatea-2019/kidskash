@@ -1,19 +1,13 @@
 import React from 'react'
 
-class WishList extends React.Component {
-  state = {
+function WishList (){
 
-  }
-
-  render () {
     return (
-      <>
       <div className='wishllist'>
-      <h2>Mum/Dad: that is what i want :</h2>
+      <h2>Mum/Dad: These are what i want :</h2>
       </div>
-    </>
     )
   }
-}
+
 export default WishList
 
