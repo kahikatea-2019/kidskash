@@ -4,14 +4,24 @@
   "description": "An App that teaches children about decision making and encourages positive interaction between parents and children",
   "main": "index.js",
   "scripts": {
-    "start": "run-p start:*",
+    "start": "start:*",
     "start:server": "node server",
     "start:client": "webpack",
-    "dev": "run-p server",
+    "dev": "node server & webpack --watch",
     "dev:server": "nodemon server",
     "dev-client": "webpack --watch",
     "knex": "knex --knexfile server/db/knexfile.js",
     "test": "jest --watchAll"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
   },
   "repository": {
     "type": "git",
@@ -27,13 +37,18 @@
     "express": "^4.16.4",
     "knex": "^0.16.5",
     "path": "^0.12.7",
+    "react": "^16.8.6",
     "sqlite3": "^4.0.7",
     "superagent": "^5.0.5"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^24.8.0",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
     "jest": "^24.8.0",
     "nodemon": "^1.19.0",
