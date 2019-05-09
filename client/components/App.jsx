@@ -1,13 +1,12 @@
 import React from 'react'
 // import AppRoutes from './AppRoutes'
-// import HelloWorld from './HelloWorld'
-import Tasklist from './Tasklist'
+import HelloWorld from './HelloWorld'
 
 function App () {
   return (
     <React.Fragment>
 
-      <Tasklist/>
+      <HelloWorld/>
     </React.Fragment>
   )
 }
