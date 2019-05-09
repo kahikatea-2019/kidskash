@@ -6,8 +6,6 @@ module.exports = {
   getParents
 }
 
-function getParents (id, db = connection) {
-  return db('parents')
-    .where('id', id)
-    .first()
+function getParents (db = connection) {
+  return db('parents').select
 }
