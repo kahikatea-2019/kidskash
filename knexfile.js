@@ -1,12 +1,19 @@
 // Update with your config settings.
-
+const path = require('path')
 module.exports = {
 
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './dev.sqlite3'
-    }z
+      filename: path.join(__dirname, './dev.sqlite3')
+    },
+    useNullAsDefault: true,
+    migrations: {
+      directory: path.join(__dirname, './server/db/migrations/')
+    },
+    seeds: {
+      directory: path.join(__dirname, './server/db/seeds/')
+    }
   },
 
   staging: {
