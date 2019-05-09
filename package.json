@@ -11,7 +11,7 @@
     "dev:server": "nodemon server",
     "dev:client": "webpack --watch",
     "knex": "knex --knexfile server/db/knexfile.js",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll --color"
   },
   "babel": {
     "presets": [
@@ -33,15 +33,22 @@
     "url": "https://github.com/kahikatea-2019/kidskash/issues"
   },
   "homepage": "https://github.com/kahikatea-2019/kidskash#readme",
+  "jest": {
+    "setupFiles": [
+      "./tests/setup.js"
+    ]
+  },
   "dependencies": {
     "express": "^4.16.4",
     "knex": "^0.16.5",
-    "path": "^0.12.7",
     "react-bootstrap": "^1.0.0-beta.8",
     "sqlite3": "^4.0.7",
     "superagent": "^5.0.5"
   },
   "devDependencies": {
+    "path": "^0.12.7",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
