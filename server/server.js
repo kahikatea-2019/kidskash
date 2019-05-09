@@ -7,7 +7,7 @@ server.use(express.static(path.join(__dirname, './public')))
 server.use(express.json())
 
 server.get('*', (req, res) => {
-  res.redirect('/')
+  res.send('hello world')
 })
 
 module.exports = server
