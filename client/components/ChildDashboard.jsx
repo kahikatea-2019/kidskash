@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Childdashboard () {
+function ChildDashboard () {
   return (
     <div>
       <h2>Child Dashboard</h2>
@@ -9,4 +9,4 @@ function Childdashboard () {
   )
 }
 
-export default Childdashboard
+export default ChildDashboard
