@@ -1,12 +1,12 @@
 import React from 'react'
 
-const parentlogin= () => {
+const parentlogin = () => {
   return (
-      <div>
-    <h2>Hi Mum or Dad...</h2>
-    <button>Login</button>
-    <button>Register</button>
-
+    <div>
+      <h2>Hi Mum or Dad...</h2>
+      <button>Login</button>
+      <button>Register</button>
+      <p> Creating special moments with your children</p>
     </div>
   )
 }
