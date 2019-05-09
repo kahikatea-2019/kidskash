@@ -6,6 +6,12 @@ module.exports = {
     client: 'sqlite3',
     connection: {
       filename: './dev.sqlite3'
+    },
+    migrations:{
+      directory:path.join(__dirname,'migrations')
+    },
+    seeds:{
+      directory:path.join(__dirname,'seeds')
     }
   },
 
