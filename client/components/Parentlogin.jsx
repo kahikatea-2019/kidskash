@@ -1,6 +1,6 @@
 import React from 'react'
 
-function parentlogin () {
+function Parentlogin () {
   return (
     <div>
 
@@ -13,4 +13,4 @@ function parentlogin () {
   )
 }
 
-export default parentlogin
+export default Parentlogin
