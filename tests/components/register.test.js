@@ -13,8 +13,8 @@ test('<Register/> has 4 input', () => {
 })
 
 test('<Register/>', () => {
-    expect(register.find('h2').text()).toBe('Please put the right format to register!')
-  })
+  expect(register.find('h2').text()).toBe('Please put the right format to register!')
+})
 
 describe('Register', () => {
   it('returns correctly', () => {
