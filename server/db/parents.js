@@ -5,5 +5,6 @@ module.exports = {
 }
 
 function getParents (db = connection) {
-  return db('parents').select()
+  return db('parents')
+    .select()
 }
