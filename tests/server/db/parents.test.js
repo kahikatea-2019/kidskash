@@ -1,4 +1,4 @@
-const env = require('./test-environment')
+const env = require('../../test-environment')
 const db = require('../../../server/db/parents')
 
 let testDb = null
@@ -10,9 +10,9 @@ beforeEach(() => {
 
 afterEach(() => env.cleanup(testDb))
 
-testDb('getParents returns a list of all parents', () => {
+test('getParents returns a list of all parents', () => {
   return db.getParents(testDb)
-    .then(cohorts => {
-      expect(cohorts.length).toBe(0)
+    .then(parents => {
+      expect(parents.length).toBe(2)
     })
 })
