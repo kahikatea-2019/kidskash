@@ -1,6 +1,6 @@
 const request = require('supertest')
 
-const server = require('../../routes')
+const server = require('../../routes/parents')
 
 test('GET /parents returns all parents', () => {
   request(server)

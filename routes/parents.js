@@ -1,5 +1,5 @@
 const express = require('express')
-const db = require('../db/parents.js')
+const db = require('../server/db/parents')
 const router = express.Router()
 
 router.get('/parents', (req, res) => {
