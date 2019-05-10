@@ -2,19 +2,20 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import App from '../../client/components/App'
 
+const app = shallow(<App />)
+
 test('test <App/> is set up correctly', () => {
   expect(true).toBe(true)
 })
 
-test('<App/> has 1 React.Fragment', () => {
-  const wrapper = shallow(<App />)
-  expect(wrapper.find('React.Fragment').length).toBe(0)
-})
-
-const app = shallow(<App />)
-
 describe('App', () => {
   it('renders correctly', () => {
     expect(app).toMatchSnapshot()
+  })
+})
+
+describe('<App />', () => {
+  it('renders 1 <HelloWorld /> components', () => {
+    expect(app.find('HelloWorld').length).toBe(1)
   })
 })
