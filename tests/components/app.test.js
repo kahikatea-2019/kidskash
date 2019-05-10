@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import App from '../../client/components/App'
-import HelloWorld from '../../client/components/HelloWorld'
+
 
 const app = shallow(<App />)
 
