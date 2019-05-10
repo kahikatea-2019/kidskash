@@ -13,8 +13,8 @@ test('<WishList/> has 1 div', () => {
 })
 
 test('<WishList/>', () => {
-    expect(wishList.find('h2').text()).toBe('Mum/Dad: These are what i want :')
-  })
+  expect(wishList.find('h2').text()).toBe('Mum/Dad: These are what i want :')
+})
 
 describe('WishList', () => {
   it('returns correctly', () => {
