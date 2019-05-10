@@ -1,5 +1,6 @@
 // Update with your config settings.
 const path = require('path')
+
 module.exports = {
 
   development: {
@@ -13,6 +14,20 @@ module.exports = {
     },
     seeds: {
       directory: path.join(__dirname, './server/db/seeds/')
+    }
+  },
+
+  test: {
+    client: 'sqlite3',
+    connection: {
+      filename: ':memory:'
+    },
+    useNullAsDefault: true,
+    migrations: {
+      directory: path.join(__dirname, './server/db/migrations/')
+    },
+    seeds: {
+      directory: path.join(__dirname, './tests/server/db/seeds')
     }
   },
 
@@ -48,4 +63,4 @@ module.exports = {
     }
   }
 
-};
+}
