@@ -2,10 +2,10 @@ const express = require('express')
 const db = require('../server/db/children')
 const router = express.Router()
 
-router.get('/children', (req, res) => {
-  db.getChildren()
+router.get('/', (req, res) => {
+  db.retrieveAllChildren()
     .then(children => {
-      res.render('index', { children: children })
+      res.send(children)
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' +

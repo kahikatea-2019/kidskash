@@ -1,7 +1,14 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+// component calls
 import AppRoutes from './AppRoutes'
 
-function App () {
+// action calls
+import { retrieveAllChildren } from '../actions/children'
+
+function App (props) {
+  props.dispatch(retrieveAllChildren())
   return (
     // test your components by dropping them where <HelloWolrd/> is
     <React.Fragment>
@@ -10,4 +17,4 @@ function App () {
   )
 }
 
-export default App
+export default connect()(App)

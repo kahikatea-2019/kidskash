@@ -1,10 +1,10 @@
 const connection = require('./connection')
 
 module.exports = {
-  getChildren
+  retrieveAllChildren
 }
 
-function getChildren (db = connection) {
+function retrieveAllChildren (db = connection) {
   return db('children')
     .select()
 }
