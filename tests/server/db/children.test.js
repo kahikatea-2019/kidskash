@@ -10,7 +10,7 @@ beforeEach(() => {
 afterEach(() => env.cleanup(testDb))
 
 test('getChildren returns a list of all children', () => {
-  return db.getChildren(testDb)
+  return db.retrieveAllChildren(testDb)
     .then(children => {
       expect(children.length).toBe(2)
     })
