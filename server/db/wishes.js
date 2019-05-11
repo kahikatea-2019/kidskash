@@ -1,17 +1,17 @@
 const connection = require('./connection')
 
-module.exports ={
-   getWishes,
-   getWish
+module.exports = {
+  retrieveAllWishes,
+  getWish
 }
 
-function getWishes ( db = connection ) {
-    return db('wishes')
-    .select ()
-    console.log(getWishes)
+function retrieveAllWishes (db = connection) {
+  return db('wishes')
+    .select()
+  console.log(retrieveAllWishes)
 }
 
-function getWish (id, db = connection){
-    return db ('wishes')
+function getWish (id, db = connection) {
+  return db('wishes')
     .where('id', id)
 }
