@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 // component calls
 import AppRoutes from './AppRoutes'
+import PopUpMessage from './PopUpMessage'
 
 // action calls
 import { retrieveAllChildren } from '../actions/children'
@@ -13,6 +14,7 @@ function App (props) {
     // test your components by dropping them where <HelloWolrd/> is
     <React.Fragment>
       <AppRoutes/>
+      <PopUpMessage />
     </React.Fragment>
   )
 }
