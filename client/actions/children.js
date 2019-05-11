@@ -14,7 +14,7 @@ export const requestChildren = () => {
 export const receiveChildren = (children) => {
   return {
     type: RECEIVE_CHILDREN,
-    children: children.map(child => child)
+    children
   }
 }
 
