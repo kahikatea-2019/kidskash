@@ -1,2 +1,2 @@
 # KidsKash
-Helping Children learning about the importance of good decision making
+Helping Children learn about the importance of good decision making
