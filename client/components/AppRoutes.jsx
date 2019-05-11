@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import HelloWorld from './HelloWorld'
-
+import ChildLogin from './ChildLogin'
+import ChildDashboard from './ChildDashboard'
 // import xyz from actions
 
 class AppRoutes extends React.Component {
@@ -14,7 +14,8 @@ class AppRoutes extends React.Component {
 
         <Router>
           <Switch>
-            <Route exact path='/' component={HelloWorld} />
+            <Route exact path='/' component={ChildLogin} />
+            <Route exact path='/dashboard' component={ChildDashboard} />
 
           </Switch>
         </Router>
