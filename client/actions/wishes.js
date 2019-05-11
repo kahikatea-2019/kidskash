@@ -14,7 +14,7 @@ export const requestWishes = () => {
 export const receiveWishes = (wishes) => {
   return {
     type: RECEIVE_WISHES,
-    wishes: wishes.map(wish => wish)
+    wishes
   }
 }
 
