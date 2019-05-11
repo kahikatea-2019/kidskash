@@ -11,10 +11,10 @@ const divStyle = {
 
 class PopUpMessage extends React.Component {
     state = {
-      showHeader: false
+      showHeader: true
     }
     componentDidMount () {
-      setTimeout(() => this.setState({ showHeader: true }), 2000)
+      setTimeout(() => this.setState({ showHeader: false }), 2000)
     }
 
     render () {
