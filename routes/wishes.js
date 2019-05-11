@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-
 const db = require('../server/db/wishes')
 
 router.get('/wishes', (req, res) => {
@@ -13,4 +12,14 @@ router.get('/wishes', (req, res) => {
     })
 })
 
+router.get('/wishes/:id', (req, res) => {
+  const id = req.params.id
+  db.getWish(id)
+    .then(wishes => 
+      res.send( wishes )
+    )
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
+})
 module.exports = router

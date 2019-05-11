@@ -1,15 +1,17 @@
-const enviroment = process.env.NODE_ENV || 'development'
-const config = require('../../knexfile')[enviroment]
-const connection = require('knex')(config)
+const connection = require('./connection')
 
 module.exports ={
-    getWishes
+   getWishes,
+   getWish
 }
 
-function getWishes (id, db = connection) {
+function getWishes ( db = connection ) {
     return db('wishes')
-    .join('children','children.id','wishes.children_id')
-    .join('parents','parents.id','wishes.parents_id')
-    .select('wishes.id','wishes.content','wishes.stars',
-    'wishes.parents_id','wishes.children_id','children.id','parents.id')
+    .select ()
+    console.log(getWishes)
+}
+
+function getWish (id, db = connection){
+    return db ('wishes')
+    .where('id', id)
 }
