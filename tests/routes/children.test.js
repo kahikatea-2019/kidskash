@@ -1,10 +1,10 @@
 const request = require('supertest')
 
-const server = require('../../routes/parents')
+const server = require('../../routes/children')
 
-test('GET /parents returns all parents', () => {
+test('GET /children returns all children', () => {
   request(server)
-    .get('/parents')
+    .get('/children')
     .then(res => {
       expect(res.body).toHaveLength(2)
     })

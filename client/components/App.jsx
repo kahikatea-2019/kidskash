@@ -1,13 +1,22 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+// component calls
 import AppRoutes from './AppRoutes'
 
-function App () {
+// action calls
+import { retrieveAllChildren } from '../actions/children'
+import { retrieveAllWishes } from '../actions/wishes'
+
+function App (props) {
+  const { dispatch } = props
+  dispatch(retrieveAllChildren())
+  dispatch(retrieveAllWishes())
   return (
-    // test your components by dropping them where <HelloWolrd/> is
     <React.Fragment>
       <AppRoutes/>
     </React.Fragment>
   )
 }
 
-export default App
+export default connect()(App)
