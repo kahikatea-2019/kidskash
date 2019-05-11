@@ -2,24 +2,25 @@ const express = require('express')
 const router = express.Router()
 const db = require('../server/db/wishes')
 
-router.get('/wishes', (req, res) => {
-  db.getWishes()
+router.get('/', (req, res) => {
+  db.retrieveAllWishes()
     .then(wishes => {
-      res.render('wishes', wishes)
+      res.send(wishes)
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 })
 
-router.get('/wishes/:id', (req, res) => {
+router.get('/dashboard/:id', (req, res) => {
   const id = req.params.id
-  db.getWish(id)
-    .then(wishes => 
-      res.send( wishes )
+  db.retrieveWish(id)
+    .then(wish =>
+      res.send(wish)
     )
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 })
+
 module.exports = router
