@@ -1,6 +1,9 @@
 import { RECEIVE_CHILDREN } from '../actions/children'
 
-function retrieveAllChildren (state = [], action) {
+const initialChildrenState = []
+  
+
+function retrieveAllChildren (state = initialChildrenState, action) {
   switch (action.type) {
     case RECEIVE_CHILDREN:
       return action.children
