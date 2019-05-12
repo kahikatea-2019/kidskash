@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import ChildLogin from './ChildLogin'
 import ChildDashboard from './ChildDashboard'
-// import xyz from actions
 
 class AppRoutes extends React.Component {
   render () {

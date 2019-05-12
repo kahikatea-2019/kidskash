@@ -1,11 +1,22 @@
 import React from 'react'
 
+import WishList from './WishList'
+import StarBank from './StarBank'
+
 function ChildDashboard () {
   return (
-    <div>
-      <h2>Child Dashboard</h2>
-      <p> Over here I will be able to add my wishlist and see my starboard </p>
-    </div>
+    <React.Fragment>
+      <div className="cd-body">
+        <div className="high-frame">
+          <input></input>
+        </div>
+        <div className="low-frame">
+          <WishList />
+          <StarBank />
+        </div>
+
+      </div>
+    </React.Fragment>
   )
 }
 
