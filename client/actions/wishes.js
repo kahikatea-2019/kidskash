@@ -2,7 +2,7 @@ import request from 'superagent'
 
 export const RETRIEVE_ALL_WISHES = 'RETRIEVE_ALL_WISHES'
 export const REQUEST_WISHES = 'REQUEST_WISHES'
-export const RECEIVE_WISHES = 'RECIEVE_WISHES'
+export const RECEIVE_WISHES = 'RECEIVE_WISHES'
 export const SHOW_ERROR = 'SHOW_ERROR'
 
 export const requestWishes = () => {

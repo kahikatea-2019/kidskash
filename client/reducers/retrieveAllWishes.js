@@ -1,6 +1,8 @@
 import { RECEIVE_WISHES } from '../actions/wishes'
 
-function retrieveAllWishes (state = [], action) {
+const initialWishesState = []
+
+function retrieveAllWishes (state = initialWishesState, action) {
   switch (action.type) {
     case RECEIVE_WISHES:
       return action.wishes
