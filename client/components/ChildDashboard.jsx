@@ -1,12 +1,49 @@
 import React from 'react'
+// import { connect } from 'react-redux'
 
-function ChildDashboard () {
+import WishList from './WishList'
+import StarBank from './StarBank'
+
+export default function ChildDashboard () {
+  const child = {
+    id: 1,
+    child_name: 'Amy',
+    display_url: 'https://i.pinimg.com/736x/62/c5/c0/62c5c004441b4bd92e9228198aa17aeb.jpg',
+    parents_id: '1'
+  }
+  // const {dispatch, wishes} = props
+  // function returnChildWishes (wishes) {
+  //   const childWishes = wishes.forEach(wish => {
+  //     if (wish.child_id === child.id) {
+  //       return wish
+  //     }
+  //     return childWishes
+  //   })
+  // }
+
   return (
-    <div>
-      <h2>Child Dashboard</h2>
-      <p> Over here I will be able to add my wishlist and see my starboard </p>
-    </div>
+    <React.Fragment>
+      <div className="cd-body">
+        <div className="high-frame">
+          <div className="welcome-user">
+            {`Hello, ${child.child_name}!`}
+          </div>
+          <input></input>
+        </div>
+        <div className="low-frame">
+          <WishList id={child.id}/>
+          <StarBank id={child.id}/>
+        </div>
+
+      </div>
+    </React.Fragment>
   )
 }
 
-export default ChildDashboard
+// function mapStateToProps (state) {
+//   return {
+//     wishes: state.retrieveAllWishes
+//   }
+// }
+
+// export default connect(mapStateToProps)(ChildDashboard)
