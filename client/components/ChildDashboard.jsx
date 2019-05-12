@@ -28,7 +28,6 @@ export default function ChildDashboard () {
           <div className="welcome-user">
             {`Hello, ${child.child_name}!`}
           </div>
-          <input></input>
         </div>
         <div className="low-frame">
           <WishList id={child.id}/>

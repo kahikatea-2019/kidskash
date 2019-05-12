@@ -2,7 +2,8 @@ const connection = require('./connection')
 
 module.exports = {
   retrieveAllWishes,
-  getWish
+  getWish,
+  addWish
 }
 
 function retrieveAllWishes (db = connection) {
@@ -15,3 +16,10 @@ function getWish (id, db = connection) {
   return db('wishes')
     .where('id', id)
 }
+
+function addWish (id,wish, db = connection) {
+  return db('wishes')
+    .where('id', id)
+    .insert('content', wish.content)
+}
+
