@@ -16,7 +16,8 @@ function ChildLogin (props) {
     <React.Fragment>
       <center>
         <h1>KIDS - KA$H</h1>
-        {loginArray}
+        <div className="login-frame">{loginArray}</div>
+
       </center>
     </React.Fragment>
 

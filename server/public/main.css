@@ -2,7 +2,15 @@
   border: .2px solid red;
   padding: 10px;
 }
-
+.child-login-entry-frame {
+  display: flex;
+  flex-direction: column;
+}
+.login-frame {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 /* ChildDashboard */
 .cd-body {
   display: flex;
