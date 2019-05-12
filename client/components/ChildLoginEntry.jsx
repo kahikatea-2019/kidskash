@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-// import ChildDashboard from './ChildDashboard'
-
 function ChildLoginEntry (props) {
   const { id, child_name, display_URL } = props.child
   return (
