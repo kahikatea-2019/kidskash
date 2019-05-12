@@ -10,7 +10,6 @@ class AppRoutes extends React.Component {
     return (
 
       <div>
-        <h2>renders AppRoutes.jsx</h2>
 
         <Router>
           <Switch>
