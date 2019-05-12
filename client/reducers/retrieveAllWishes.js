@@ -1,15 +1,19 @@
-import { RECEIVE_WISHES, ADD_NEW_WISH } from '../actions/wishes'
+import { RECEIVE_WISHES, ADD_NEW_WISH,DELETE_WISH } from '../actions/wishes'
 
-function retrieveAllWishes (state = [], action) {
+function retrieveAllWishes (
+  state = [], action) {
   switch (action.type) {
     case RECEIVE_WISHES:
       return action.wishes
+
     case ADD_NEW_WISH:
       return [
-        ...state,
-        Object.assign({},action.wish)
-      ]
-    default:
+        ...state,action.wish]
+
+    case DELETE_WISH:
+        return state.filter(wish => wish.id !== action.id)
+    
+        default:
       return state
   }
 }

@@ -43,6 +43,7 @@
     "express": "^4.16.4",
     "knex": "^0.16.5",
     "react-bootstrap": "^1.0.0-beta.8",
+    "react-modal": "^3.8.1",
     "sqlite3": "^4.0.7",
     "superagent": "^5.0.5"
   },

@@ -1,63 +1,57 @@
 import React from 'react'
-import {addWish} from '../actions/wishes'
 import { connect } from 'react-redux'
-
-
+import * as wishesAction from '../actions/wishes'
 class WishList extends React.Component  {
-  constructor(props){
-    super(props)
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.state = {
-      content:''
+ 
+    deleteWish (e,id) {
+      e.preventDefault()
+      this.props.deleteWish(id)
     }
-  }
 
-  handleChange(e){
-    this.setState({
-      content:e.target.value
-    })
-  }
-
-  handleSubmit(e){
-    e.preventDefault()
-    let wish = {
-      content:this.state.content
+    receiveWish(wish) {
+      const {id,content,stars} = wish
+      return(
+        <tr key={id} className='wish' onClick={() => this.props.deleteWish(id)}>
+        <td className="item-content">{content}</td>
+        <td className="stars" style={{ backgroundImage: '' }}>{stars}</td>
+        </tr>
+      )
     }
-    this.props.addWish(wish)
-  }
  
 
   render() {
   return (
     <div className='wishllist'>
       <h2>Mum/Dad: These are what i want :</h2>
-      <div>
         <hr/>
-      {/* {<ul>{this.props.wishes.map((wish,i)=>
-        <li key ={i}>{wish.content}</li>)}
-      </ul>} */}
-      </div>
-      <form onSubmit={this.handleSubmit}>
-      <input type="text" onChange={this.handleChange} 
-      placeholder ='Write your wishes here...' className='form-control' />
-      <input type="submit" />
-      </form>
+    <table className="u-full-width">
+      <thead>
+        <tr>
+          <th className="item-content">Wishes</th>
+          <th className="stars">Stars</th>
+        </tr>
+      </thead>
+      <tbody>
+        {this.props.wishes.map(wish => this.receiveWish(wish))}
+      </tbody>
+    </table>
     </div>
   )
 }
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = ({ wishes }) => {
   return {
-    wishes: state.wishes
+    wishes
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    addWish: wish => dispatch(addWish(wish))
+    deleteWish: id => dispatch(wishesAction.deleteWish(id)),
+    addWish: wish => dispatch(wishesAction.addWish(wish))
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(WishList)
+export default connect(mapStateToProps, mapDispatchToProps)(Wishes)
+
