@@ -2,3 +2,25 @@
   border: .2px solid red;
   padding: 10px;
 }
+
+/* ChildDashboard */
+.cd-body {
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+  margin: 0px auto;
+}
+.high-frame {
+  background-color: rebeccapurple;
+  margin: 0px auto;
+  width: 95%;
+}
+.low-frame {
+  display: flex;
+  margin: 0px auto;
+  width: 95%;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-between;
+  background-color: lightpink;
+}

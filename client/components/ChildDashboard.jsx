@@ -8,6 +8,9 @@ function ChildDashboard () {
     <React.Fragment>
       <div className="cd-body">
         <div className="high-frame">
+          <div className="welcome-user">
+            {`Hello, Ete!`}
+          </div>
           <input></input>
         </div>
         <div className="low-frame">
