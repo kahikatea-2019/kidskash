@@ -1,9 +1,9 @@
 exports.seed = function (knex, Promise) {
   // Deletes ALL existing entries
-  return knex('starbank').del()
+  return knex('starbanks').del()
     .then(function () {
       // Inserts seed entries
-      return knex('starbank').insert([
+      return knex('starbanks').insert([
         { id: 1, children_id: '1', stars: '50' },
         { id: 2, children_id: '2', stars: '50' },
         { id: 3, children_id: '3', stars: '50' },
