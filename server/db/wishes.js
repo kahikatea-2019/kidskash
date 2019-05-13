@@ -8,7 +8,6 @@ module.exports = {
 function retrieveAllWishes (db = connection) {
   return db('wishes')
     .select()
-  console.log(retrieveAllWishes)
 }
 
 function getWish (id, db = connection) {

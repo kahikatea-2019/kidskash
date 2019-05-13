@@ -11,15 +11,6 @@ export default function ChildDashboard () {
     display_url: 'https://i.pinimg.com/736x/62/c5/c0/62c5c004441b4bd92e9228198aa17aeb.jpg',
     parents_id: '1'
   }
-  // const {dispatch, wishes} = props
-  // function returnChildWishes (wishes) {
-  //   const childWishes = wishes.forEach(wish => {
-  //     if (wish.child_id === child.id) {
-  //       return wish
-  //     }
-  //     return childWishes
-  //   })
-  // }
 
   return (
     <React.Fragment>
@@ -39,11 +30,3 @@ export default function ChildDashboard () {
     </React.Fragment>
   )
 }
-
-// function mapStateToProps (state) {
-//   return {
-//     wishes: state.retrieveAllWishes
-//   }
-// }
-
-// export default connect(mapStateToProps)(ChildDashboard)
