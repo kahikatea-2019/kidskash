@@ -7,6 +7,7 @@ import AppRoutes from './AppRoutes'
 // action calls
 import { retrieveAllChildren } from '../actions/children'
 import { retrieveAllWishes } from '../actions/wishes'
+import MaterialUi from './MaterialUi';
 // awaiting starbanks get route && db function
 
 function App (props) {
@@ -16,6 +17,7 @@ function App (props) {
   return (
     <React.Fragment>
       <AppRoutes/>
+      <MaterialUi/>
     </React.Fragment>
   )
 }
