@@ -21,7 +21,7 @@ class WishInput extends React.Component {
   handleSubmit (wish) {
     const { dispatch } = this.props
     dispatch(addWish(wish))
-    dispatch(actions.reset('wish'))
+    dispatch(actions.reset('content'))
   }
 
   render () {
@@ -30,11 +30,11 @@ class WishInput extends React.Component {
         <h2>Mum/Dad: These are what i want :</h2>
       <Form model='content' onSubmit={this.handleSubmit}>
         <label>Wish:</label>
-        <Control.text model='.content'
+        <Control.text model='.wish'
           className='u-full-width' validateOn='blur'
           validators={{ isRequired: content => content && content.length }}
         />
-        <Errors model=".content" className="error" show='touched'
+        <Errors model=".wish" className="error" show='touched'
           messages={{ isRequired: 'Please write  a wish.' }}
         />
         {/* this could be another componment for each star container */}

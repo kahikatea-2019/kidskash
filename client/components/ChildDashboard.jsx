@@ -3,6 +3,7 @@ import React from 'react'
 
 import WishList from './WishList'
 import StarBank from './StarBank'
+import WishInput from './WishInput';
 
 export default function ChildDashboard () {
   const child = {
@@ -30,6 +31,7 @@ export default function ChildDashboard () {
           </div>
         </div>
         <div className="low-frame">
+          <WishInput/>
           <WishList id={child.id}/>
           <StarBank id={child.id}/>
         </div>

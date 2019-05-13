@@ -8,7 +8,8 @@ function retrieveAllWishes (
 
     case ADD_NEW_WISH:
       return [
-        ...state,action.wish]
+        ...state,
+        action.wish]
 
     case DELETE_WISH:
         return state.filter(wish => wish.id !== action.id)

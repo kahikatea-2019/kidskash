@@ -6,10 +6,10 @@ import { createStore, applyMiddleware, compose } from 'redux'
 
 import reducers from './reducers'
 import App from './components/App'
-import { getWishes } from './actions/wishes';
+import { retrieveAllWishes } from './actions/wishes';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-const store = createStore(reducers, {wishes:getWishes()} ,composeEnhancers(applyMiddleware(thunk)))
+const store = createStore(reducers, {wishes:retrieveAllWishes()} ,composeEnhancers(applyMiddleware(thunk)))
 
 document.addEventListener('DOMContentLoaded', () => {
   render(
