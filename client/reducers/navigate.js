@@ -13,7 +13,7 @@ function navigate (state = initialNavigationState, action) {
       }
     case DASHBOARD:
       return {
-        activePage: 'dashbaord'
+        activePage: 'dashboard'
       }
     default:
       return state
