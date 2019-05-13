@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const db = require('../server/db/starbank')
+const db = require('../server/db/starbanks')
 
 router.get('/', (req, res) => {
   db.retrieveAllStars()
