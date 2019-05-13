@@ -7,6 +7,7 @@ import AppRoutes from './AppRoutes'
 // action calls
 import { retrieveAllChildren } from '../actions/children'
 import { retrieveAllWishes } from '../actions/wishes'
+// awaiting starbanks get route && db function
 
 function App (props) {
   const { dispatch } = props

@@ -1,27 +1,25 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { connect } from 'react-redux'
 
+// Component Imports
 import ChildLogin from './ChildLogin'
 import ChildDashboard from './ChildDashboard'
 
-class AppRoutes extends React.Component {
-  render () {
-    return (
+function AppRoutes (props) {
+  return (
+    <div>
+      <Router>
+        {(props.activePage === 'child-login' ? <ChildLogin /> : <ChildDashboard />)}
+      </Router>
+    </div>
+  )
+}
 
-      <div>
-
-        <Router>
-          <Switch>
-            <Route exact path='/' component={ChildLogin} />
-            <Route exact path='/dashboard' component={ChildDashboard} />
-
-          </Switch>
-        </Router>
-
-      </div>
-
-    )
+const mapStateToProps = (state) => {
+  return {
+    activePage: state.navigate.activePage
   }
 }
 
-export default AppRoutes
+export default connect(mapStateToProps)(AppRoutes)
