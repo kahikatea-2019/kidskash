@@ -1,10 +1,10 @@
 const connection = require('./connection')
 
 module.exports = {
-  retrieveAllStars
+  retrieveAllStarBanks
 }
 
-function retrieveAllStars (db = connection) {
-  return db('starbank')
+function retrieveAllStarBanks (db = connection) {
+  return db('starbanks')
     .select()
 }

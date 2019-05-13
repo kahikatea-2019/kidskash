@@ -3,13 +3,12 @@ const router = express.Router()
 const db = require('../server/db/starbanks')
 
 router.get('/', (req, res) => {
-  db.retrieveAllStars()
-    .then(stars => {
-      res.send(stars)
+  db.retrieveAllStarBanks()
+    .then(starbanks => {
+      res.send(starbanks)
     })
     .catch(err => {
-      res.status(500).send('DATABASE ERROR: ' +
-    err.message)
+      res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 })
 

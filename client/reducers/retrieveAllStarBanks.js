@@ -5,7 +5,7 @@ const initialStarBanksState = []
 function retrieveAllStarBanks (state = initialStarBanksState, action) {
   switch (action.type) {
     case RECEIVE_STARBANKS:
-      return action.initialStarBanksState
+      return action.starbanks
     default:
       return state
   }
