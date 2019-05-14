@@ -3,7 +3,7 @@ import React from 'react'
 
 import WishList from './WishList'
 import StarBank from './StarBank'
-import WishInput from './WishInput';
+import WishInput from './WishInput'
 
 export default function ChildDashboard () {
   const child = {
