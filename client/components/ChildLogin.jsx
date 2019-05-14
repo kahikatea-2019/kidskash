@@ -15,11 +15,11 @@ function ChildLogin (props) {
   return (
     <React.Fragment>
       <center>
-        <h1>KIDS - KA$H</h1>
+        <h1>Starry</h1>
         <div className='heroUnit'>
           <div className='heroContent'>
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                Kiddiez Log In
+                Lets collect some stars!
             </Typography>
             <Typography variant="h6" align="center" color="textSecondary" paragraph>
               Click on your picture!!
@@ -32,6 +32,17 @@ function ChildLogin (props) {
           <main>
             <div className=' layout, cardGrid'>
               <Grid container spacing={40}>{loginArray}</Grid>
+
+              <footer className='footer'>
+                <Typography variant="h6" align="center" gutterBottom>
+          Copywrite Starry
+                </Typography>
+                <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+          Teach your kids to be a better version of themselves.. and you...
+                </Typography>
+
+              </footer>
+
             </div>
           </main>
         </Grid>
