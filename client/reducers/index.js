@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux'
 
 import retrieveAllChildren from './retrieveAllChildren'
-import retrieveAllWishes from './retrieveAllWishes'
+import retrieveAllStarBanks from './retrieveAllStarBanks'
 import navigate from './navigate'
+import input from './input'
 
 export default combineReducers({
   retrieveAllChildren,
-  retrieveAllWishes,
-  navigate
-
+  retrieveAllStarBanks,
+  navigate,
+  ...input
 })

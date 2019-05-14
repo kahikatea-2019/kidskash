@@ -1,6 +1,6 @@
 const express = require('express')
-const db = require('../server/db/children')
 const router = express.Router()
+const db = require('../server/db/children')
 
 router.get('/', (req, res) => {
   db.retrieveAllChildren()
