@@ -64,9 +64,7 @@ export function addNewWish (newWish) {
     dispatch(getWishPending())
     return request.post('/v1/wishes')
       .send(newWish)
-      .then(res => {
-        dispatch(addWishSuccess(res.body))
-      })
+      .then(() => dispatch(retrieveAllWishes()))
       .catch(err => dispatch(showError(err.message)))
   }
 }

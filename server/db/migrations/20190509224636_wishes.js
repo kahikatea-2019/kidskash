@@ -3,7 +3,6 @@ exports.up = (knex, Promise) => {
     table.increments('id').primary()
     table.string('content')
     table.integer('stars').unsigned()
-    table.integer('parents_id').references('parents.id')
     table.integer('child_id').references('child.id')
   })
 }
