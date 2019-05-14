@@ -25,7 +25,13 @@ class ChildLoginEntry extends React.Component {
         <div className="child-login-entry-frame">
           <img src={display_URL} width="300" height="300"/>
           <h2>{child_name}</h2>
-          <Button variant="contained" color="primary" className={'button'}><Link to="#" onClick={trigger}><Typography variant='h6'>Log in</Typography></Link>
+          <Button
+            variant="contained"
+            color="default"
+            className={'button'}>
+            <Link to="#" onClick={trigger}>
+              <Typography variant='h5'>Log in</Typography>
+            </Link>
           </Button>
         </div>
 
