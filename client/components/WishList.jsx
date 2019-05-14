@@ -3,11 +3,6 @@ import { connect } from 'react-redux'
 import * as wishesAction from '../actions/wishes'
 
 class WishList extends React.Component {
-  deleteWish (e, id) {
-    e.preventDefault()
-    this.props.deleteWish(id)
-  }
-
   receiveWish (wish) {
     const { id, content, stars } = wish
     return (
@@ -20,20 +15,9 @@ class WishList extends React.Component {
 
   render () {
     return (
-      <div className='wishllist'>
+      <div className='wishlist'>
         <h2>Wishlist</h2>
-        <hr/>
-        <table className="u-full-width">
-          <thead>
-            <tr>
-              <th className="item-content">Wishes</th>
-              <th className="stars">Stars</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.props.wish.map(wish => this.receiveWish(wish))}
-          </tbody>
-        </table>
+        
       </div>
     )
   }
@@ -47,7 +31,6 @@ const mapStateToProps = ({ wish }) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    deleteWish: id => dispatch(wishesAction.deleteWish(id)),
     addWish: wish => dispatch(wishesAction.addWish(wish))
   }
 }

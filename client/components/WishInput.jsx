@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { actions, Control, Errors, Form } from 'react-redux-form'
 
-import { addWish } from '../actions/wishes'
+import { addNewWish, retrieveAllWishes } from '../actions/wishes'
 
 class WishInput extends React.Component {
   constructor (props) {
@@ -18,22 +18,26 @@ class WishInput extends React.Component {
   //   }
 
   handleSubmit (wish) {
-    const { dispatch } = this.props
-    dispatch(addWish(wish))
-    dispatch(actions.reset('content'))
+    const { dispatch, currentUser } = this.props
+
+    dispatch(addNewWish({
+      ...wish,
+      child_id: currentUser
+    }))
+    dispatch(actions.reset('wish'))
   }
 
   render () {
     return (
       <div className= 'wishinput'>
         <h2>Mum/Dad: These are what i want :</h2>
-        <Form model='content' onSubmit={this.handleSubmit}>
+        <Form model='wish' onSubmit={this.handleSubmit}>
           <label>Wish:</label>
-          <Control.text model='.wish'
+          <Control.text model='.content'
             className='u-full-width' validateOn='blur'
             validators={{ isRequired: content => content && content.length }}
           />
-          <Errors model=".wish" className="error" show='touched'
+          <Errors model=".content" className="error" show='touched'
             messages={{ isRequired: 'Please write  a wish.' }}
           />
           {/* this could be another componment for each star container */}
@@ -46,4 +50,10 @@ class WishInput extends React.Component {
   }
 }
 
-export default connect()(WishInput)
+function mapStateToProps (state) {
+  return {
+    currentUser: state.navigate.currentUser
+  }
+}
+
+export default connect(mapStateToProps)(WishInput)
