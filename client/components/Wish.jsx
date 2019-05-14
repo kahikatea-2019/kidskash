@@ -1,10 +1,24 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import {addStarToWish, removeStarFromWish  } from '../actions/wishes'
 
 class Wish extends React.Component {
-  // constructor (props) {
-  //   super(props)
+  constructor (props) {
+    super(props)
 
+    this.incrementClick = this.incrementClick.bind.this
+    this.decrementClick = this.decrementClick.bind.this 
+  }
+    incrementClick(wishId) {
+      const {dispatch } = this.props
+      dispatch(addStarToWish(wishId))
+    }
+
+    decrementClick(startbankId) {
+      const {dispatch } = this.props
+      dispatch(removeStarFromWish(startbankId))
+    }
+  
   //   const { dispatch } = props
 
   //   this.increment = this.increment.bind(this)
@@ -23,13 +37,14 @@ class Wish extends React.Component {
           <div className="wish">content</div>
           <div className="required-stars">stars</div>
           <div className="allocated-stars">stars2</div>
-          <button className="increment-button">+</button>
-          <button className="decrement-button">-</button>
+          <button onClick ={this.incrementClick} className="increment-button">+</button>
+          <button onClick ={this.decrementClick} className="decrement-button">-</button>
         </div>
       </React.Fragment>
     )
   }
 }
+
 
 function mapStateToProps (state) {
   return {
