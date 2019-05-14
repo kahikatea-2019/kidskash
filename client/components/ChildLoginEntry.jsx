@@ -46,15 +46,20 @@ const styles = theme => ({
     padding: `${theme.spacing.unit * 8}px 0`
   },
   card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column'
+    // maxWidth: '400.5%'
+    width: 400
   },
   cardMedia: {
-    paddingTop: '56.25%' // 16:9
+    paddingTop: '100%'
+    // height: '400.5%',
+    // width: '400.5%'
+
   },
   cardContent: {
     flexGrow: 1
+    // height: '400.5%',
+    // width: '400.5%'
+
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
@@ -87,9 +92,6 @@ const ChildLoginEntry = props => {
             <CardContent className={classes.cardContent}>
               <Typography gutterBottom variant="h5" component="h2">
                 {child_name}
-              </Typography>
-              <Typography>
-                      Click here to view your Wishlist
               </Typography>
             </CardContent>
           </Card>
