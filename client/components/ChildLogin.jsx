@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import MaterialUI from './MaterialUi'
 
 import ChildLoginEntry from './ChildLoginEntry'
 
@@ -17,8 +18,8 @@ function ChildLogin (props) {
       <center>
         <h1>KIDS - KA$H</h1>
         <div className="login-frame">{loginArray}</div>
-
       </center>
+      <MaterialUI/>
     </React.Fragment>
 
   )

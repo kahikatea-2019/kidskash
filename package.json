@@ -40,9 +40,11 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.16.4",
     "knex": "^0.16.5",
+    "material-ui": "^1.0.0-beta.47",
     "react-bootstrap": "^1.0.0-beta.8",
     "sqlite3": "^4.0.7",
     "superagent": "^5.0.5"
