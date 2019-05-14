@@ -57,7 +57,18 @@ function ComplexGrid (props) {
             </Grid>
           </Grid>
         </Grid>
+        <Grid>
+        </Grid>
       </Paper>
+
+      <footer className={classes.footer}>
+        <Typography variant="h6" align="center" gutterBottom>
+          Copywrite Starry
+        </Typography>
+        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+        Teach your kids to be a better version of themselves.. and you...
+        </Typography>
+      </footer>
     </div>
   )
 }

@@ -32,22 +32,21 @@ function ChildLogin (props) {
           <main>
             <div className=' layout, cardGrid'>
               <Grid container spacing={40}>{loginArray}</Grid>
-
-              <footer className='footer'>
-                <Typography variant="h6" align="center" gutterBottom>
-          Copywrite Starry
-                </Typography>
-                <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Teach your kids to be a better version of themselves.. and you...
-                </Typography>
-
-              </footer>
-
             </div>
           </main>
         </Grid>
 
       </center>
+
+      <footer className='footer'>
+        <Typography variant="h6" align="center" gutterBottom>
+          Copywrite Starry
+        </Typography>
+        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+          Teach your kids to be a better version of themselves.. and you...
+        </Typography>
+
+      </footer>
     </React.Fragment>
 
   )
