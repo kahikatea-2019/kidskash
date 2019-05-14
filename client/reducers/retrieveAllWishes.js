@@ -1,4 +1,4 @@
-import { RECEIVE_WISHES, ADD_NEW_WISH, DELETE_WISH } from '../actions/wishes'
+import { RECEIVE_WISHES, ADD_WISH_SUCCESS, DELETE_WISH } from '../actions/wishes'
 
 const initialWishesState = []
 
@@ -7,13 +7,8 @@ function retrieveAllWishes (state = initialWishesState, action) {
     case RECEIVE_WISHES:
       return action.wishes
 
-    case ADD_NEW_WISH:
-      return [
-        ...state,
-        action.wish]
-
-    case DELETE_WISH:
-      return state.filter(wish => wish.id !== action.id)
+    case ADD_WISH_SUCCESS:
+      return action.newWish
 
     default:
       return state

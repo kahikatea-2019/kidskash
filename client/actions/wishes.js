@@ -2,8 +2,9 @@ import request from 'superagent'
 
 export const REQUEST_WISHES = 'REQUEST_WISHES'
 export const RECEIVE_WISHES = 'RECEIVE_WISHES'
+export const GET_WISH_PENDING = 'GET_WISH_PENDING'
+export const ADD_WISH_SUCCESS = 'ADD_WISH_SUCCESS'
 export const ADD_NEW_WISH = 'ADD_NEW_WISH'
-export const DELETE_WISH = 'DELETE_WISH'
 export const SHOW_ERROR = 'SHOW_ERROR'
 
 export const requestWishes = () => {
@@ -19,17 +20,23 @@ export const receiveWishes = (wishes) => {
   }
 }
 
-export const addWish = (wish) => {
+export function getWishPending () {
   return {
-    type: ADD_NEW_WISH,
+    type: GET_WISH_PENDING
+  }
+}
+
+export function addWishSuccess (wish) {
+  return {
+    type: ADD_WISH_SUCCESS,
     wish
   }
 }
 
-export const deleteWish = id => {
+export const addWish = (wish) => {
   return {
-    type: DELETE_WISH,
-    id
+    type: ADD_NEW_WISH,
+    wish
   }
 }
 
@@ -52,14 +59,14 @@ export function retrieveAllWishes () {
   }
 }
 
-export function appendWish () {
-  return (dispatch) => {
-    request.post('/v1/wishes')
-      .then(response => {
-        dispatch(addWish(response.body))
+export function addNewWish (newWish) {
+  return dispatch => {
+    dispatch(getWishPending())
+    return request.post('/v1/wishes')
+      .send(newWish)
+      .then(res => {
+        dispatch(addWishSuccess(res.body))
       })
-      .catch(err => {
-        dispatch(showError(err.message))
-      })
+      .catch(err => dispatch(showError(err.message)))
   }
 }

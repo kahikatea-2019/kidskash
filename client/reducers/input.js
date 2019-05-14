@@ -2,8 +2,8 @@ import { createForms } from 'react-redux-form'
 
 import retrieveAllWishes from './retrieveAllChildren'
 
-export const wish =[ {
-  id: '',
+export const wish = [ {
+  child_id: '',
   content: '',
   stars: ''
 }]

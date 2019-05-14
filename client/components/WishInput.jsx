@@ -19,21 +19,22 @@ class WishInput extends React.Component {
 
   handleSubmit (wish) {
     const { dispatch } = this.props
-    dispatch(addWish(wish))
-    dispatch(actions.reset('content'))
+    dispatch(addWish(wish, currentUser))
+    dispatch(actions.reset('wish'))
   }
 
   render () {
+    const { currentUser } = this.props
     return (
       <div className= 'wishinput'>
         <h2>Mum/Dad: These are what i want :</h2>
-        <Form model='content' onSubmit={this.handleSubmit}>
+        <Form model='wish' onSubmit={this.handleSubmit}>
           <label>Wish:</label>
-          <Control.text model='.wish'
+          <Control.text model='.content'
             className='u-full-width' validateOn='blur'
             validators={{ isRequired: content => content && content.length }}
           />
-          <Errors model=".wish" className="error" show='touched'
+          <Errors model=".content" className="error" show='touched'
             messages={{ isRequired: 'Please write  a wish.' }}
           />
           {/* this could be another componment for each star container */}
