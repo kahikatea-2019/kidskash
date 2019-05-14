@@ -35,15 +35,15 @@ function ComplexGrid (props) {
       <Paper className={classes.paper}>
         <Grid container spacing={16}>
           <Grid item>
+            <ButtonBase className={classes.image}>
+              <img className={classes.img} alt="Cutie" src="https://cdn1.iconfinder.com/data/icons/monkey-rounded-set-volume-1/512/emoticon_expression_monkey_face_smile_rounded-36-512.png" />
+            </ButtonBase>
             <Typography component="h5" variant="h5" align="center" gutterBottom>
             Wonder wonder how many stars you are? I shall write my wish here:
             </Typography>
             <TextField>
               Make a wish
             </TextField>
-            <ButtonBase className={classes.image}>
-              <img className={classes.img} alt="Cutie" src="https://cdn1.iconfinder.com/data/icons/monkey-rounded-set-volume-1/512/emoticon_expression_monkey_face_smile_rounded-36-512.png" />
-            </ButtonBase>
           </Grid>
           <Grid item l={12} l container>
             <Grid item l container direction="column" spacing={50}>
@@ -51,7 +51,7 @@ function ComplexGrid (props) {
               </Grid>
             </Grid>
             <Grid item>
-              <Typography component="h5" variant="h5" gutterBottom>
+              <Typography component="h5" variant="h5">
               MY STARS:
               </Typography>
             </Grid>

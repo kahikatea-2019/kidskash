@@ -19,10 +19,6 @@ import { withStyles } from '@material-ui/core/styles'
 import { yellow } from '@material-ui/core/colors'
 
 const styles = theme => ({
-  appBar: {
-    position: 'centre',
-    color: yellow
-  },
   icon: {
     marginRight: theme.spacing.unit * 2
   },
