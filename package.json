@@ -39,6 +39,7 @@
     ]
   },
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.16.4",
     "knex": "^0.16.5",
