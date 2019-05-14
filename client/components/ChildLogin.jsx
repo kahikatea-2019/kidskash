@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import MaterialUI from './MaterialUi'
+import ChildLoginEntry from './ChildLoginEntry'
 
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
@@ -9,7 +9,7 @@ function ChildLogin (props) {
   const { children } = props
 
   const loginArray = children.map(child => {
-    return <MaterialUI key={child.id} child={child} />
+    return <ChildLoginEntry key={child.id} child={child} />
   })
 
   return (
