@@ -4,7 +4,7 @@ import MaterialDashboard from './MaterialDashboard'
 
 import WishList from './WishList'
 import StarBank from './StarBank'
-import WishInput from './WishInput';
+import WishInput from './WishInput'
 
 export default function ChildDashboard () {
   const child = {
@@ -19,7 +19,9 @@ export default function ChildDashboard () {
       <div className="cd-body">
         <div className="high-frame">
           <div className="welcome-user">
-            {`Hello, ${child.child_name}!`}
+            <h1>
+              {`Hello, ${child.child_name}!`}
+            </h1>
           </div>
         </div>
         <div className="low-frame">

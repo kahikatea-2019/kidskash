@@ -15,7 +15,7 @@
   margin: 0px auto;
 }
 .high-frame {
-  background-color: rebeccapurple;
+  background-color: rgb(228, 241, 104);
   margin: 0px auto;
   width: 95%;
 }
@@ -26,9 +26,10 @@
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-between;
-  background-color: lightpink;
+  background-color: rgb(175, 212, 230);
 }
 
 p, h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto'; font-size: flex
   }
+  

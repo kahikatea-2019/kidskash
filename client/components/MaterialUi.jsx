@@ -82,34 +82,23 @@ const Album = props => {
       <CssBaseline />
 
       <Grid item sm={6} md={4} lg={3}>
-
-        <Card className={classes.card}>
-          <CardMedia
-            className={classes.cardMedia}
-            image= "https://previews.123rf.com/images/sergt/sergt1606/sergt160600068/57936472-giraffe-vector-icon-giraffe-flat-icon-round-icon-giraffe-head-icon.jpg"
-            title="Hey its me!"
-          />
-          <CardContent className={classes.cardContent}>
-            <Typography gutterBottom variant="h5" component="h2">
-              {child_name}
-            </Typography>
-            <Typography>
+        <Link to="#" onClick={trigger}>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.cardMedia}
+              image= "https://previews.123rf.com/images/sergt/sergt1606/sergt160600068/57936472-giraffe-vector-icon-giraffe-flat-icon-round-icon-giraffe-head-icon.jpg"
+              title="Hey its me!"
+            />
+            <CardContent className={classes.cardContent}>
+              <Typography gutterBottom variant="h5" component="h2">
+                {child_name}
+              </Typography>
+              <Typography>
                       Click here to view your Wishlist
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button
-              size="small"
-              variant="contained"
-              color="default"
-              style={{ justifyContent: 'center' }}>
-              <Link to="#" onClick={trigger}>
-                Log-in
-              </Link>
-            </Button>
-          </CardActions>
-        </Card>
-
+              </Typography>
+            </CardContent>
+          </Card>
+        </Link>
       </Grid>
 
     </React.Fragment>
