@@ -9,7 +9,7 @@ function ChildLogin (props) {
   const { children } = props
 
   const loginArray = children.map(child => {
-    return <ChildLoginEntry key={child.id} child={child} />
+    return <ChildLoginEntry key={child.id} child={child} img={child.display_URL} />
   })
 
   return (

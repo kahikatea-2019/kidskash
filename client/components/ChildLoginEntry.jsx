@@ -43,7 +43,7 @@ const styles = theme => ({
     }
   },
   cardGrid: {
-    padding: `${theme.spacing.unit * 8}px 0`
+    padding: `${theme.spacing.unit * 40}px 0`
   },
   card: {
     // maxWidth: '400.5%'
@@ -86,13 +86,14 @@ const ChildLoginEntry = props => {
           <Card className={classes.card}>
             <CardMedia
               className={classes.cardMedia}
-              image= "https://previews.123rf.com/images/sergt/sergt1606/sergt160600068/57936472-giraffe-vector-icon-giraffe-flat-icon-round-icon-giraffe-head-icon.jpg"
+              image={props.img}
               title="Hey its me!"
             />
             <CardContent className={classes.cardContent}>
               <Typography gutterBottom variant="h5" component="h2">
                 {child_name}
               </Typography>
+
             </CardContent>
           </Card>
         </Link>
