@@ -15,6 +15,7 @@ class WishInput extends React.Component {
 
     dispatch(addNewWish({
       ...wish,
+      stars2: 0,
       child_id: currentUser
     }))
     dispatch(actions.reset('wish'))

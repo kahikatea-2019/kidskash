@@ -1,28 +1,18 @@
 import React from 'react'
-import { connect } from 'react-redux'
 
 class Wish extends React.Component {
-  // constructor (props) {
-  //   super(props)
-
-  //   const { dispatch } = props
-
-  //   this.increment = this.increment.bind(this)
-  // }
-
-  // increment (wishId, child_id) {
-  //   this.dispatch(addStarToWish(wishId))
-  //   dispatch(removeStarFromStarBank(child_id))
-  // }
-  // const { id, content, stars, stars2, child_id } = this.props
+  constructor (props) {
+    super(props)
+  }
 
   render () {
+    const { id, content, stars, stars2, child_id } = this.props.wish
     return (
       <React.Fragment>
         <div className="individual-wish-content">
-          <div className="wish">content</div>
-          <div className="required-stars">stars</div>
-          <div className="allocated-stars">stars2</div>
+          <div className="wish">{content}</div>
+          <div className="required-stars">{stars}</div>
+          <div className="allocated-stars">{stars2}</div>
           <button className="increment-button">+</button>
           <button className="decrement-button">-</button>
         </div>
@@ -31,9 +21,4 @@ class Wish extends React.Component {
   }
 }
 
-function mapStateToProps (state) {
-  return {
-
-  }
-}
-export default connect(mapStateToProps)(Wish)
+export default Wish
