@@ -2,20 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { actions, Control, Errors, Form } from 'react-redux-form'
 
-import { addNewWish, retrieveAllWishes } from '../actions/wishes'
+import { addNewWish } from '../actions/wishes'
 
 class WishInput extends React.Component {
   constructor (props) {
     super(props)
-    // this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
-
-  //   handleChange(e){
-  //     this.setState({
-  //       content:e.target.value
-  //     })
-  //   }
 
   handleSubmit (wish) {
     const { dispatch, currentUser } = this.props
@@ -42,8 +35,14 @@ class WishInput extends React.Component {
           />
           {/* this could be another componment for each star container */}
           <label>Stars:</label>
-          <Control.select model='.stars' className='u-full-width' />
+          <Control.select model='.stars' className='u-full-width'>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </Control.select>
           <button type='submit' className='button-primary'>Add</button>
+
         </Form>
       </div>
     )
