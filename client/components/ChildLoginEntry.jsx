@@ -30,7 +30,7 @@ class ChildLoginEntry extends React.Component {
             color="default"
             className={'button'}>
             <Link to="#" onClick={trigger}>
-              <Typography variant='h5'>Log in</Typography>
+              <Typography variant='h5'>Log-in</Typography>
             </Link>
           </Button>
         </div>
