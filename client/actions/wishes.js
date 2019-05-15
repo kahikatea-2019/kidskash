@@ -7,7 +7,7 @@ export const ADD_WISH_SUCCESS = 'ADD_WISH_SUCCESS'
 export const ADD_NEW_WISH = 'ADD_NEW_WISH'
 export const SHOW_ERROR = 'SHOW_ERROR'
 
-export const ADD_STAR = 'ADD_STAR'
+export const UPDATE_STAR = 'UPDATE_STAR'
 export const REMOVE_STAR = 'REMOVE_STAR'
 
 export const requestWishes = () => {
@@ -51,9 +51,9 @@ export const showError = (errorMessage) => {
 }
 
 // StarBank
-export const addStarToWish = (star, value) => {
+export const updateStarsInWish = (star, value) => {
   return {
-    type: ADD_STAR,
+    type: UPDATE_STAR,
     star,
     value
   }

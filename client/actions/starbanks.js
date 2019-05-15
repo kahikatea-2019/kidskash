@@ -5,7 +5,7 @@ export const REQUEST_STARBANKS = 'REQUEST_STARBANKS'
 export const RECEIVE_STARBANKS = 'RECEIVE_STARBANKS'
 export const SHOW_ERROR = 'SHOW_ERROR'
 
-export const ADD_STAR = 'ADD_STAR'
+export const UPDATE_STAR = 'UPDATE_STAR'
 export const REMOVE_STAR = 'REMOVE_STAR'
 
 export const requestAllStarBanks = () => {
@@ -29,9 +29,9 @@ export const showError = (errorMessage) => {
 }
 
 // Wish-Star2
-export const addStarToStarbank = (star, value) => {
+export const updateStarsInStarBank = (star, value) => {
   return {
-    type: ADD_STAR,
+    type: UPDATE_STAR,
     star,
     value
   }

@@ -2,8 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 // import actions
-import { addStarToWish, removeStarFromWish } from '../actions/wishes'
-import { addStarToStarbank, removeStarFromStarbank } from '../actions/starbanks'
+import { updateStarsInWish } from '../actions/wishes'
+import { updateStarsInStarBank } from '../actions/starbanks'
 
 class Wish extends React.Component {
   constructor (props) {
@@ -16,16 +16,16 @@ class Wish extends React.Component {
     const { dispatch } = this.props
     const newAllocated = allocatedStars + 1
     const newBoxed = boxedStars - 1
-    dispatch(addStarToWish(wishId, newAllocated))
-    dispatch(removeStarFromStarbank(childId, newBoxed))
+    dispatch(updateStarsInWish(wishId, newAllocated))
+    dispatch(updateStarsInStarBank(childId, newBoxed))
   }
 
   decrementClick (wishId, childId, allocatedStars, boxedStars) {
     const { dispatch } = this.props
     const newAllocated = allocatedStars - 1
     const newBoxed = boxedStars + 1
-    dispatch(removeStarFromWish(wishId, newAllocated))
-    dispatch(addStarToStarbank(childId, newBoxed))
+    dispatch(updateStarsInWish(wishId, newAllocated))
+    dispatch(updateStarsInStarBank(childId, newBoxed))
   }
 
   render () {
