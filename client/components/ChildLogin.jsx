@@ -16,12 +16,9 @@ function ChildLogin (props) {
     <React.Fragment>
       <div className='heroUnit'>
         <div className='heroContent'>
-          <center> <img src = '/images/STARBOX.png' height="500" width="500" /></center>
+          <center> <img src = '/images/STARBOX.png' height="450" width="450" /></center>
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
                 Lets collect some stars!
-          </Typography>
-          <Typography variant="h6" align="center" color="textSecondary" paragraph>
-              Click on your picture!!
           </Typography>
         </div>
       </div>
@@ -30,14 +27,14 @@ function ChildLogin (props) {
         justify='center' >
         <main>
           <div className=' layout, cardGrid'>
-            <Grid container spacing={40}>{loginArray}</Grid>
+            <Grid container align="center" spacing={40}>{loginArray}</Grid>
           </div>
         </main>
       </Grid>
 
       <footer className='footer'>
         <Typography variant="h6" align="center" gutterBottom>
-          Copywrite Starry
+          Copyright Starry
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
           Teach your kids to be a better version of themselves.. and you...
