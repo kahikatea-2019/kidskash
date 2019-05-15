@@ -1,7 +1,7 @@
-* {
+/* * {
   border: 2px solid red;
   padding: 10px;
-}
+} */
 
 
 /*Background for Login */
@@ -15,11 +15,13 @@
   flex-direction: column;
   width: 1280px;
   margin: 0px auto;
+
 }
 .high-frame {
   background-color: rgb(228, 241, 104);
   margin: 0px auto;
   width: 95%;
+
 }
 .low-frame {
   display: flex;
@@ -29,6 +31,7 @@
   flex-grow: 1;
   justify-content: space-between;
   background-color: rgb(175, 212, 230);
+ 
 }
 
 .form-input{
@@ -37,15 +40,18 @@
 
 .wishinput{
   width: 99%;
+  border-radius: 25px;
   
 }
 
 .wishlist{
-  width: 250px;
+  width: 736px;
+  border: 2px solid rgb(0, 0, 0);
 }
 
 .bank{
-  width: 75%;
+  width: 38.6%;
+  border: 2px solid rgb(0, 0, 0);
 }
 p, h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto'; font-size: flex
