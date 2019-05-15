@@ -25,6 +25,7 @@ class WishList extends React.Component {
     const childWishes = this.retrieveChildWishes()
     return (
       <div className='wishlist'>
+        <h2>Wishes</h2>
         {childWishes}
       </div>
     )

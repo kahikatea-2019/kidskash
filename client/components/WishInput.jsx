@@ -52,7 +52,7 @@ class WishInput extends React.Component {
       <div className= 'wishinput'>
         {/* <h2>Mum/Dad: These are what i want :</h2> */}
         <Form model='wish' onSubmit={this.handleSubmit}>
-          <label><h2>Wish:</h2></label>
+          <label><h2>Lets add a Wish:</h2></label>
           <Control.text model='.content'
             className='u-full-width form-input' validateOn='blur'
             validators={{ isRequired: content => content && content.length }}

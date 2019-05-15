@@ -9,8 +9,8 @@ class StarBank extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <div>
-          <h2>This is where I will see my collection of stars from great behaviour and helping out</h2>
+        <div className= 'bank'>
+          <h2>Star Bank</h2>
           <div className="allocated-stars">stars2</div>
         </div>
       </React.Fragment>
