@@ -1,5 +1,5 @@
 import React from 'react'
-import MaterialDashboard from './MaterialDashboard'
+import MaterialDashboard from './Footer'
 // import { connect } from 'react-redux'
 
 import WishList from './WishList'
@@ -23,11 +23,12 @@ export default function ChildDashboard () {
               {`Hello, ${child.child_name}!`}
             </h1>
           </div>
-        </div>
-        <div className="low-frame">
-          <WishInput/>
-          <WishList id={child.id}/>
-          <StarBank id={child.id}/>
+          <div className="low-frame">
+            <WishInput/>
+            <WishList id={child.id}/>
+            <StarBank id={child.id}/>
+          </div>
+
         </div>
 
         <MaterialDashboard/>
