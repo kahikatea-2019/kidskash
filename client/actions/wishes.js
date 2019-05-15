@@ -51,11 +51,23 @@ export const showError = (errorMessage) => {
 }
 
 // StarBank
-export const updateStarsInWish = (star, value) => {
+export const updateStarsInWish = (wishId, newAllocated) => {
   return {
     type: UPDATE_STAR,
-    star,
-    value
+    wishId,
+    newAllocated
+  }
+}
+
+export function updateStars (wishId, newAllocated) {
+  return (dispatch) => {
+    request.put('/v1/wishes')
+      .send({ wishId, newAllocated })
+      .then(dispatch(updateStarsInWish(wishId, newAllocated)))
+      .then(dispatch(retrieveAllWishes()))
+      .catch(err => {
+        dispatch(showError(err.message))
+      })
   }
 }
 

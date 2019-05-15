@@ -2,30 +2,28 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 // import actions
-import { updateStarsInWish } from '../actions/wishes'
-import { updateStarsInStarBank } from '../actions/starbanks'
+import { updateStars } from '../actions/wishes'
+import { updateStarsInStarBank, retrieveAllStarBanks } from '../actions/starbanks'
 
 class Wish extends React.Component {
   constructor (props) {
     super(props)
 
-    this.incrementClick = this.incrementClick.bind.this
-    this.decrementClick = this.decrementClick.bind.this
+    this.incrementClick = this.incrementClick.bind(this)
+    this.decrementClick = this.decrementClick.bind(this)
   }
   incrementClick (wishId, childId, allocatedStars, boxedStars) {
     const { dispatch } = this.props
     const newAllocated = allocatedStars + 1
-    const newBoxed = boxedStars - 1
-    dispatch(updateStarsInWish(wishId, newAllocated))
-    dispatch(updateStarsInStarBank(childId, newBoxed))
+    // const newBoxed = boxedStars - 1
+    dispatch(updateStars(wishId, newAllocated))
   }
 
   decrementClick (wishId, childId, allocatedStars, boxedStars) {
     const { dispatch } = this.props
     const newAllocated = allocatedStars - 1
-    const newBoxed = boxedStars + 1
-    dispatch(updateStarsInWish(wishId, newAllocated))
-    dispatch(updateStarsInStarBank(childId, newBoxed))
+    // const newBoxed = boxedStars + 1
+    dispatch(updateStars(wishId, newAllocated))
   }
 
   render () {
@@ -34,9 +32,7 @@ class Wish extends React.Component {
     const currentStarBank = starbanks.find(box => {
       return (box.child_id === currentUser)
     })
-    const boxedStars = currentStarBank.stars
-    console.log('starbank: ', starbanks, currentStarBank)
-    console.log('boxedStars: ', boxedStars)
+    const boxedStars = currentStarBank.boxed_stars
 
     return (
       <React.Fragment>
