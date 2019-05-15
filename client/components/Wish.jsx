@@ -39,11 +39,15 @@ class Wish extends React.Component {
     return (
       <React.Fragment>
         <div className="individual-wish-content">
-          <div className="wish">{content}</div>
-          <div className="required-stars">{required_stars}</div>
-          <div className="allocated-stars">{allocated_stars}</div>
-          <button onClick ={() => this.incrementClick(id, child_id, allocated_stars, boxedStars, required_stars)} className="increment-button">+</button>
-          <button onClick ={() => this.decrementClick(id, child_id, allocated_stars, boxedStars)} className="decrement-button">-</button>
+          <div className="wish-data-wrapper">
+            <div className="wish"><p>{content}</p></div>
+            <div className="required-stars"><p>{required_stars}</p></div>
+            <div className="allocated-stars"><p>{allocated_stars}</p></div>
+          </div>
+          <div className="button-wrapper">
+            <button onClick ={() => this.incrementClick(id, child_id, allocated_stars, boxedStars, required_stars)} className="increment-button">+</button>
+            <button onClick ={() => this.decrementClick(id, child_id, allocated_stars, boxedStars)} className="decrement-button">-</button>
+          </div>
         </div>
       </React.Fragment>
     )

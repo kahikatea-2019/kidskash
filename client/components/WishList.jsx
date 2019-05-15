@@ -15,7 +15,7 @@ class WishList extends React.Component {
     const { wishes, currentUser } = this.props
     const childWishes = wishes.map(wish => {
       if (wish.child_id === currentUser) {
-        return <Wish key={wish.id} wish={wish} />
+        return <Wish key={wish.id} wish={wish}/>
       }
     })
     return childWishes
