@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 // import actions
 import { updateStars } from '../actions/wishes'
-import { updateStarsInStarBank, retrieveAllStarBanks } from '../actions/starbanks'
+import { updateStarBanks } from '../actions/starbanks'
 
 class Wish extends React.Component {
   constructor (props) {
@@ -15,15 +15,17 @@ class Wish extends React.Component {
   incrementClick (wishId, childId, allocatedStars, boxedStars) {
     const { dispatch } = this.props
     const newAllocated = allocatedStars + 1
-    // const newBoxed = boxedStars - 1
+    const newBoxed = boxedStars - 1
     dispatch(updateStars(wishId, newAllocated))
+    dispatch(updateStarBanks(childId, newBoxed))
   }
 
   decrementClick (wishId, childId, allocatedStars, boxedStars) {
     const { dispatch } = this.props
     const newAllocated = allocatedStars - 1
-    // const newBoxed = boxedStars + 1
+    const newBoxed = boxedStars + 1
     dispatch(updateStars(wishId, newAllocated))
+    dispatch(updateStarBanks(childId, newBoxed))
   }
 
   render () {
