@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
 
 // Action Imports
 import { navigate, currentUser } from '../actions/navigate'
@@ -19,12 +21,20 @@ class ChildLoginEntry extends React.Component {
     return (
 
       <React.Fragment>
-        <Link to="#" onClick={trigger}>
-          <div className="child-login-entry-frame">
-            <img src={display_URL} width="300" height="300"/>
-            <h2>{child_name}</h2>
-          </div>
-        </Link>
+
+        <div className="child-login-entry-frame">
+          <img src={display_URL} width="300" height="300"/>
+          <h2>{child_name}</h2>
+          <Button
+            variant="contained"
+            color="default"
+            className={'button'}>
+            <Link to="#" onClick={trigger}>
+              <Typography variant='h5'>Log in</Typography>
+            </Link>
+          </Button>
+        </div>
+
       </React.Fragment>
     )
   }
