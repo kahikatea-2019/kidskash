@@ -6,13 +6,7 @@ import { updateStars } from '../actions/wishes'
 import { updateStarBanks } from '../actions/starbanks'
 
 class Wish extends React.Component {
-  constructor (props) {
-    super(props)
-
-    this.incrementClick = this.incrementClick.bind(this)
-    this.decrementClick = this.decrementClick.bind(this)
-  }
-  incrementClick (wishId, childId, allocatedStars, boxedStars) {
+  incrementClick = (wishId, childId, allocatedStars, boxedStars) => {
     const { dispatch } = this.props
     const newAllocated = allocatedStars + 1
     const newBoxed = boxedStars - 1
@@ -20,7 +14,7 @@ class Wish extends React.Component {
     dispatch(updateStarBanks(childId, newBoxed))
   }
 
-  decrementClick (wishId, childId, allocatedStars, boxedStars) {
+  decrementClick = (wishId, childId, allocatedStars, boxedStars) => {
     const { dispatch } = this.props
     const newAllocated = allocatedStars - 1
     const newBoxed = boxedStars + 1
