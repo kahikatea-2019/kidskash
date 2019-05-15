@@ -1,6 +1,4 @@
 import React from 'react'
-import MaterialDashboard from './Footer'
-// import { connect } from 'react-redux'
 
 import WishList from './WishList'
 import StarBank from './StarBank'
@@ -30,8 +28,6 @@ export default function ChildDashboard () {
           </div>
 
         </div>
-
-        <MaterialDashboard/>
 
       </div>
     </React.Fragment>
