@@ -12,4 +12,18 @@ router.get('/', (req, res) => {
     })
 })
 
+router.put('/', (req, res) => {
+  // expect req.body.childId && req.body.newAllocated
+  if (req.body.childId) {
+    const { childId, newBoxed } = req.body
+    db.updateStarsInStarBank(childId, newBoxed)
+      .then(() => {
+        res.json({ Okay: true })
+      })
+      .catch((err) => res.json({ Okay: false, error: err.message }))
+  } else {
+    res.json({ Okay: false, error: 'Content is required.' })
+  }
+})
+
 module.exports = router

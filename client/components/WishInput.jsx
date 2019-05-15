@@ -15,7 +15,7 @@ class WishInput extends React.Component {
 
     dispatch(addNewWish({
       ...wish,
-      stars2: 0,
+      allocated_stars: 0,
       child_id: currentUser
     }))
     dispatch(actions.reset('wish'))
@@ -36,7 +36,7 @@ class WishInput extends React.Component {
           />
           {/* this could be another componment for each star container */}
           <label>Stars:</label>
-          <Control.select model='.stars' className='u-full-width'>
+          <Control.select model='.required_stars' className='u-full-width'>
             <option value="5">5</option>
             <option value="10">10</option>
             <option value="15">15</option>

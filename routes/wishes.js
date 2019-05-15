@@ -31,4 +31,18 @@ router.post('/', (req, res) => {
   }
 })
 
+router.put('/', (req, res) => {
+  // expect req.body.wishId && req.body.newAllocated
+  if (req.body.wishId) {
+    const { wishId, newAllocated } = req.body
+    db.updateStarsInWish(wishId, newAllocated)
+      .then(() => {
+        res.json({ Okay: true })
+      })
+      .catch((err) => res.json({ Okay: false, error: err.message }))
+  } else {
+    res.json({ Okay: false, error: 'Content is required.' })
+  }
+})
+
 module.exports = router
