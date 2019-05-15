@@ -6,12 +6,9 @@ import { connect } from 'react-redux'
 // Action Imports
 import { navigate, currentUser } from '../actions/navigate'
 
-import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
-import CssBaseline from '@material-ui/core/CssBaseline'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
@@ -45,19 +42,14 @@ const styles = theme => ({
     padding: `${theme.spacing.unit * 40}px 0`
   },
   card: {
-    // maxWidth: '400.5%'
     width: 400
   },
   cardMedia: {
     paddingTop: '100%'
-    // height: '400.5%',
-    // width: '400.5%'
 
   },
   cardContent: {
     flexGrow: 1
-    // height: '400.5%',
-    // width: '400.5%'
 
   },
   footer: {
@@ -78,7 +70,7 @@ const ChildLoginEntry = props => {
 
   return (
     <React.Fragment>
-      <Grid item sm={6} md={4} lg={3}>
+      <Grid item sm={6} md={5} lg={4}>
         <Link to="#" onClick={trigger}>
           <Card className={classes.card}>
             <CardMedia
@@ -87,7 +79,7 @@ const ChildLoginEntry = props => {
               title="Hey its me!"
             />
             <CardContent className={classes.cardContent}>
-              <Typography gutterBottom variant="h5" component="h2">
+              <Typography gutterBottom variant="h5" align="center" component="h2">
                 {child_name}
               </Typography>
 

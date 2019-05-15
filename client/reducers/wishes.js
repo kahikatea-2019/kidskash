@@ -11,15 +11,12 @@ function retrieveAllWishes (state = initialWishesState, action) {
       return action.wish
 
     case UPDATE_STAR:
-      const updatedWishes = [ ...state ]
-
-      updatedWishes.forEach(wish => {
+      return state.map(wish => {
         if (wish.id === action.wishId) {
           wish.allocated_stars = action.newAllocated
         }
+        return wish
       })
-
-      return updatedWishes
 
     default:
       return state

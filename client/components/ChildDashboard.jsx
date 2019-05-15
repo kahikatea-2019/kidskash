@@ -1,32 +1,44 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import WishList from './WishList'
 import StarBank from './StarBank'
 import WishInput from './WishInput'
 
-export default function ChildDashboard () {
-  const child = {
-    id: 1,
-    child_name: 'Amy',
-    display_url: 'https://i.pinimg.com/736x/62/c5/c0/62c5c004441b4bd92e9228198aa17aeb.jpg',
-    parents_id: '1'
+class ChildDashboard extends React.Component {
+  render () {
+    const { currentUser, children } = this.props
+    const activeChild = children.find(child => {
+      if (child.id === currentUser) {
+        return child
+      }
+    })
+
+    return (
+      <React.Fragment>
+        <div className="cd-body">
+          <div className="high-frame">
+            <h1>
+              {`Hello, ${activeChild.child_name}!`}
+            </h1>
+          </div>
+          <div className="low-frame">
+            <WishInput/>
+            <WishList id={activeChild.id}/>
+            <StarBank id={activeChild.id}/>
+          </div>
+        </div>
+
+      </React.Fragment>
+    )
   }
-
-  return (
-    <React.Fragment>
-      <div className="cd-body">
-        <div className="high-frame">
-          <h1>
-            {`Hello, ${child.child_name}!`}
-          </h1>
-        </div>
-        <div className="low-frame">
-          <WishInput/>
-          <WishList id={child.id}/>
-          <StarBank id={child.id}/>
-        </div>
-      </div>
-
-    </React.Fragment>
-  )
 }
+
+function mapStateToProps (state) {
+  return {
+    currentUser: state.navigate.currentUser,
+    children: state.children
+  }
+}
+
+export default connect(mapStateToProps)(ChildDashboard)
