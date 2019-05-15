@@ -18,22 +18,18 @@ export default function ChildDashboard () {
     <React.Fragment>
       <div className="cd-body">
         <div className="high-frame">
-          <div className="welcome-user">
-            <h1>
-              {`Hello, ${child.child_name}!`}
-            </h1>
-          </div>
-          <div className="low-frame">
-            <WishInput/>
-            <WishList id={child.id}/>
-            <StarBank id={child.id}/>
-          </div>
-
+          <h1>
+            {`Hello, ${child.child_name}!`}
+          </h1>
         </div>
-
-        <MaterialDashboard/>
-
+        <div className="low-frame">
+          <WishInput/>
+          <WishList id={child.id}/>
+          <StarBank id={child.id}/>
+        </div>
       </div>
+      <MaterialDashboard/>
+
     </React.Fragment>
   )
 }
