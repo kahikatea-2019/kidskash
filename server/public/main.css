@@ -1,12 +1,8 @@
-.child-login-entry-frame {
-  display: flex;
-  flex-direction: column;
+* {
+  border: 2px solid red;
+  padding: 10px;
 }
-.login-frame {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+
 
 /*Background for Login */
 
@@ -35,6 +31,13 @@
   background-color: rgb(175, 212, 230);
 }
 
+.form-input{
+  width: 95%;
+}
+
+.wishinput{
+  width: 95%;
+}
 p, h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto'; font-size: flex
   }
