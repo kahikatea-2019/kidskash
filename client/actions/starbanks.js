@@ -5,7 +5,7 @@ export const REQUEST_STARBANKS = 'REQUEST_STARBANKS'
 export const RECEIVE_STARBANKS = 'RECEIVE_STARBANKS'
 export const SHOW_ERROR = 'SHOW_ERROR'
 
-export const ADD_STAR = 'ADD_NEW_STAR'
+export const ADD_STAR = 'ADD_STAR'
 export const REMOVE_STAR = 'REMOVE_STAR'
 
 export const requestAllStarBanks = () => {
@@ -28,24 +28,22 @@ export const showError = (errorMessage) => {
   }
 }
 
-//Wish-Star2
-export const aaddStarToStarbank = (star) => {
+// Wish-Star2
+export const addStarToStarbank = (star) => {
   return {
     type: ADD_STAR,
     star
   }
 }
 
-
-export const removeStarFromStarbank = (star) =>{
+export const removeStarFromStarbank = (star) => {
   return {
-      type: REMOVE_STAR,
-      star 
+    type: REMOVE_STAR,
+    star
   }
 }
 
-
-//Api
+// Api
 export function retrieveAllStarBanks () {
   return (dispatch) => {
     request.get('/v1/starbanks')

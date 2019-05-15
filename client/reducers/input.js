@@ -1,6 +1,6 @@
 import { createForms } from 'react-redux-form'
 
-import retrieveAllWishes from './retrieveAllWishes'
+import wishes from './wishes'
 
 export const wish = {
   child_id: '',
@@ -10,5 +10,5 @@ export const wish = {
 
 export default createForms({
   wish,
-  retrieveAllWishes
+  wishes
 })

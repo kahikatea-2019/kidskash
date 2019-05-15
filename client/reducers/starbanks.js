@@ -8,10 +8,11 @@ function retrieveAllStarBanks (state = initialStarBanksState, action) {
       return action.starbanks
 
     case ADD_STAR:
-      return action.star 
-    
+      return action.star
+
     case REMOVE_STAR:
       return action.star
+
     default:
       return state
   }

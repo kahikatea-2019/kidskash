@@ -7,7 +7,7 @@ export const ADD_WISH_SUCCESS = 'ADD_WISH_SUCCESS'
 export const ADD_NEW_WISH = 'ADD_NEW_WISH'
 export const SHOW_ERROR = 'SHOW_ERROR'
 
-export const ADD_STAR = 'ADD_NEW_STAR'
+export const ADD_STAR = 'ADD_STAR'
 export const REMOVE_STAR = 'REMOVE_STAR'
 
 export const requestWishes = () => {
@@ -50,23 +50,22 @@ export const showError = (errorMessage) => {
   }
 }
 
-//StarBank
+// StarBank
 export const addStarToWish = (star) => {
   return {
-    type: ADD_NEW_STAR,
+    type: ADD_STAR,
     star
   }
 }
 
-
-export const removeStarFromWish = (star) =>{
+export const removeStarFromWish = (star) => {
   return {
-      type: REMOVE_STAR,
-      star 
+    type: REMOVE_STAR,
+    star
   }
 }
 
-//Api
+// Api
 export function retrieveAllWishes () {
   return (dispatch) => {
     request.get('/v1/wishes')
