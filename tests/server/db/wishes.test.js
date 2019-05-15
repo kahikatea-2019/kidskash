@@ -24,7 +24,7 @@ test('getWish gets a single wish', () => {
   const expected = 'lollipop'
   return db.getWish(1, testDb)
     .then(wish => {
-      const actual = wish.content
+      const actual = wish[0].content
       expect(actual).toBe(expected)
     })
     .catch(err => expect(err).toBeNull())
