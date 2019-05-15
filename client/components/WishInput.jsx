@@ -26,7 +26,7 @@ class WishInput extends React.Component {
       <div className= 'wishinput'>
         <h2>Mum/Dad: These are what i want :</h2>
         <Form model='wish' onSubmit={this.handleSubmit}>
-          <label>Wish:</label>
+          <label>Add to Wishlist:</label>
           <Control.text model='.content'
             className='u-full-width' validateOn='blur'
             validators={{ isRequired: content => content && content.length }}

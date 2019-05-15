@@ -9,9 +9,7 @@ import WishInput from './WishInput'
 
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
-import { props } from 'bluebird'
 //
 
 const styles = theme => ({
@@ -46,9 +44,9 @@ function ChildDashboard (props) {
               </h1>
             </div>
             <div className={classes.paper}>
+              <StarBank id={child.id}/>
               <WishInput/>
               <WishList id={child.id}/>
-              <StarBank id={child.id}/>
             </div>
           </Grid>
         </div>
