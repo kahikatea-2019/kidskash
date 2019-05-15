@@ -16,7 +16,7 @@ function ChildLogin (props) {
     <React.Fragment>
       <div className='heroUnit'>
         <div className='heroContent'>
-          <center> <img src = '/images/STARBOX.png' height="500" width="500" /></center>
+          <center> <img src = '/images/STARBOX.png' height="450" width="450" /></center>
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
                 Lets collect some stars!
           </Typography>
@@ -27,7 +27,7 @@ function ChildLogin (props) {
         justify='center' >
         <main>
           <div className=' layout, cardGrid'>
-            <Grid container spacing={40}>{loginArray}</Grid>
+            <Grid container align="center" spacing={40}>{loginArray}</Grid>
           </div>
         </main>
       </Grid>
