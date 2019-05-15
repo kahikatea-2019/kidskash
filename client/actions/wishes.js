@@ -51,17 +51,19 @@ export const showError = (errorMessage) => {
 }
 
 // StarBank
-export const addStarToWish = (star) => {
+export const addStarToWish = (star, value) => {
   return {
     type: ADD_STAR,
-    star
+    star,
+    value
   }
 }
 
-export const removeStarFromWish = (star) => {
+export const removeStarFromWish = (star, value) => {
   return {
     type: REMOVE_STAR,
-    star
+    star,
+    value
   }
 }
 

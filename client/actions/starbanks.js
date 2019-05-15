@@ -29,17 +29,19 @@ export const showError = (errorMessage) => {
 }
 
 // Wish-Star2
-export const addStarToStarbank = (star) => {
+export const addStarToStarbank = (star, value) => {
   return {
     type: ADD_STAR,
-    star
+    star,
+    value
   }
 }
 
-export const removeStarFromStarbank = (star) => {
+export const removeStarFromStarbank = (star, value) => {
   return {
     type: REMOVE_STAR,
-    star
+    star,
+    value
   }
 }
 
@@ -55,3 +57,4 @@ export function retrieveAllStarBanks () {
       })
   }
 }
+

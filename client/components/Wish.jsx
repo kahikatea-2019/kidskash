@@ -20,10 +20,12 @@ class Wish extends React.Component {
     dispatch(removeStarFromStarbank(childId, newBoxed))
   }
 
-  decrementClick (wishId, childId) {
+  decrementClick (wishId, childId, allocatedStars, boxedStars) {
     const { dispatch } = this.props
-    dispatch(removeStarFromWish(wishId))
-    dispatch(addStarToStarbank(childId))
+    const newAllocated = allocatedStars - 1
+    const newBoxed = boxedStars + 1
+    dispatch(removeStarFromWish(wishId, newAllocated))
+    dispatch(addStarToStarbank(childId, newBoxed))
   }
 
   render () {
