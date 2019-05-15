@@ -38,4 +38,24 @@
 p, h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto'; font-size: flex
   }
+
+/* 
+  body {
+    z-index: 5;
+    background: gray url("https://cdn.pixabay.com/photo/2016/06/05/07/59/stars-1436950_960_720.jpg") repeat 0 0;
+    width: 100%;
+    height: 1080px;
+    margin: 0;
+    text-align: center;
+    -webkit-animation: slide 10s linear infinite;
+  }
+  
+  body h1 {
+    font-family: sans-serif;
+  }
+  
+  @-webkit-keyframes slide {
+      from { background-position: 0 0; }
+      to { background-position: -400px 0; }
+  }   */
   

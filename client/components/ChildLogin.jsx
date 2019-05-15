@@ -14,29 +14,26 @@ function ChildLogin (props) {
 
   return (
     <React.Fragment>
-      <center>
-        <h1>Starry</h1>
-        <div className='heroUnit'>
-          <div className='heroContent'>
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+      <div className='heroUnit'>
+        <div className='heroContent'>
+          <center> <img src = '/images/STARBOX.png' height="500" width="500" /></center>
+          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
                 Lets collect some stars!
-            </Typography>
-            <Typography variant="h6" align="center" color="textSecondary" paragraph>
+          </Typography>
+          <Typography variant="h6" align="center" color="textSecondary" paragraph>
               Click on your picture!!
-            </Typography>
-          </div>
+          </Typography>
         </div>
-        <Grid
-          container='true'
-          justify='center' >
-          <main>
-            <div className=' layout, cardGrid'>
-              <Grid container spacing={40}>{loginArray}</Grid>
-            </div>
-          </main>
-        </Grid>
-
-      </center>
+      </div>
+      <Grid
+        container='true'
+        justify='center' >
+        <main>
+          <div className=' layout, cardGrid'>
+            <Grid container spacing={40}>{loginArray}</Grid>
+          </div>
+        </main>
+      </Grid>
 
       <footer className='footer'>
         <Typography variant="h6" align="center" gutterBottom>
