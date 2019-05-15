@@ -2,24 +2,30 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 class StarBank extends React.Component {
-  constructor (props) {
-    super(props)
-  }
-
   render () {
+    const { starbanks, currentUser } = this.props
+    const currentStarBank = starbanks.find(starbank => {
+      return (starbank.child_id === currentUser)
+    })
+    const thisStarBox = currentStarBank.boxed_stars
+
     return (
       <React.Fragment>
-        <div>
-          <h2>This is where I will see my collection of stars from great behaviour and helping out</h2>
-          <div className="allocated-stars">stars2</div>
+        <div className="starbox">
+
+          <h2>My StarBox</h2>
+          <div className="boxed-stars">{thisStarBox}</div>
+
         </div>
       </React.Fragment>
     )
   }
 }
+
 function mapStateToProps (state) {
   return {
-
+    starbanks: state.starbanks,
+    currentUser: state.navigate.currentUser
   }
 }
 
