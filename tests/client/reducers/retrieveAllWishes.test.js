@@ -1,4 +1,4 @@
-import retrieveAllWishes from '../../../client/reducers/retrieveAllWishes'
+import retrieveAllWishes from '../../../client/reducers/wishes'
 
 test('reducer populates some initial state', () => {
   const newState = retrieveAllWishes(undefined, '@@INIT')

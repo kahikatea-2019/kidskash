@@ -1,4 +1,4 @@
-import retrieveAllChildren from '../../../client/reducers/retrieveAllChildren'
+import retrieveAllChildren from '../../../client/reducers/children'
 
 test('reducer populates some initial state', () => {
   const newState = retrieveAllChildren(undefined, '@@INIT')

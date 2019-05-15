@@ -11,7 +11,7 @@ beforeEach(() => {
 afterEach(() => testEnv.cleanup(testDb))
 
 test('retrieveAllWishes get all wishes', () => {
-  const expected = 4
+  const expected = 20
   return db.retrieveAllWishes(testDb)
     .then(wishes => {
       const actual = wishes.length
