@@ -15,10 +15,11 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   if (req.body.content) {
-    const { content, stars, child_id } = req.body
+    const { content, required_stars, allocated_stars, child_id } = req.body
     const newWish = {
       content,
-      stars,
+      required_stars,
+      allocated_stars,
       child_id
     }
     db.addWish(newWish)
