@@ -20,9 +20,6 @@ function ChildLogin (props) {
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
                 Lets collect some stars!
           </Typography>
-          <Typography variant="h6" align="center" color="textSecondary" paragraph>
-              Click on your picture!!
-          </Typography>
         </div>
       </div>
       <Grid
@@ -37,7 +34,7 @@ function ChildLogin (props) {
 
       <footer className='footer'>
         <Typography variant="h6" align="center" gutterBottom>
-          Copywrite Starry
+          Copyright Starry
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
           Teach your kids to be a better version of themselves.. and you...
