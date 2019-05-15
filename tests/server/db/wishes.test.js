@@ -11,7 +11,7 @@ beforeEach(() => {
 afterEach(() => testEnv.cleanup(testDb))
 
 test('retrieveAllWishes get all wishes', () => {
-  const expected = 4
+  const expected = 20
   return db.retrieveAllWishes(testDb)
     .then(wishes => {
       const actual = wishes.length
@@ -24,7 +24,7 @@ test('getWish gets a single wish', () => {
   const expected = 'lollipop'
   return db.getWish(1, testDb)
     .then(wish => {
-      const actual = wish.content
+      const actual = wish[0].content
       expect(actual).toBe(expected)
     })
     .catch(err => expect(err).toBeNull())

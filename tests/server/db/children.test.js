@@ -12,6 +12,6 @@ afterEach(() => env.cleanup(testDb))
 test('getChildren returns a list of all children', () => {
   return db.retrieveAllChildren(testDb)
     .then(children => {
-      expect(children.length).toBe(2)
+      expect(children.length).toBe(5)
     })
 })

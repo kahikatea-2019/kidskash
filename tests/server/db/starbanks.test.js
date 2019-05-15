@@ -12,10 +12,10 @@ afterEach(() => testEnv.cleanup(testDb))
 
 test('retrieveAllStars gets all the stars', () => {
   const expected = 5
-  return db.retrieveAllStars(testDb)
+  return db.retrieveAllStarBanks(testDb)
     .then(stars => {
       const actual = stars.length
-      expected(actual).toBe(expected)
+      expect(actual).toBe(expected)
     })
-    .catch(err => expected(err).toBeNull())
+    .catch(err => expect(err).toBeNull())
 })
