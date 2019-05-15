@@ -6,26 +6,26 @@ import { updateStars } from '../actions/wishes'
 import { updateStarBanks } from '../actions/starbanks'
 
 class Wish extends React.Component {
-  constructor (props) {
-    super(props)
-
-    this.incrementClick = this.incrementClick.bind(this)
-    this.decrementClick = this.decrementClick.bind(this)
-  }
-  incrementClick (wishId, childId, allocatedStars, boxedStars) {
+  incrementClick = (wishId, childId, allocatedStars, boxedStars, required_stars) => {
     const { dispatch } = this.props
     const newAllocated = allocatedStars + 1
     const newBoxed = boxedStars - 1
-    dispatch(updateStars(wishId, newAllocated))
-    dispatch(updateStarBanks(childId, newBoxed))
+
+    if (newAllocated <= required_stars) {
+      dispatch(updateStars(wishId, newAllocated))
+      dispatch(updateStarBanks(childId, newBoxed))
+    }
   }
 
-  decrementClick (wishId, childId, allocatedStars, boxedStars) {
+  decrementClick = (wishId, childId, allocatedStars, boxedStars) => {
     const { dispatch } = this.props
     const newAllocated = allocatedStars - 1
     const newBoxed = boxedStars + 1
-    dispatch(updateStars(wishId, newAllocated))
-    dispatch(updateStarBanks(childId, newBoxed))
+
+    if (newAllocated >= 0) {
+      dispatch(updateStars(wishId, newAllocated))
+      dispatch(updateStarBanks(childId, newBoxed))
+    }
   }
 
   render () {
@@ -42,7 +42,7 @@ class Wish extends React.Component {
           <div className="wish">{content}</div>
           <div className="required-stars">{required_stars}</div>
           <div className="allocated-stars">{allocated_stars}</div>
-          <button onClick ={() => this.incrementClick(id, child_id, allocated_stars, boxedStars)} className="increment-button">+</button>
+          <button onClick ={() => this.incrementClick(id, child_id, allocated_stars, boxedStars, required_stars)} className="increment-button">+</button>
           <button onClick ={() => this.decrementClick(id, child_id, allocated_stars, boxedStars)} className="decrement-button">-</button>
         </div>
       </React.Fragment>
