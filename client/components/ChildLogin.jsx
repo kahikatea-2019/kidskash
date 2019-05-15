@@ -26,7 +26,7 @@ function ChildLogin (props) {
 
 function mapStateToProps (state) {
   return {
-    children: state.retrieveAllChildren
+    children: state.children
   }
 }
 

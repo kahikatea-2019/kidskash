@@ -5,6 +5,7 @@ module.exports = {
   getWish,
   addWish,
   getWishes,
+  updateStarsInWish,
   deleteWish
 }
 
@@ -23,15 +24,11 @@ function addWish (newWish, db = connection) {
     .insert(newWish)
 }
 
-// function addWish (wish) {
-//   const newWish = {
-//     id, ...wish
-//   }
-//   const storage = JSON.parse(localStorage.getWish('_eda_wishes') || '[]')
-//   storage.push(newWish)
-//   localStorage.setWish('_eda_wishes', JSON.stringify(storage))
-//   return newWish
-// }
+function updateStarsInWish (wishId, newAllocated, db = connection) {
+  return db('wishes')
+    .where('id', wishId)
+    .update('allocated_stars', newAllocated)
+}
 
 function getWishes () {
   JSON.parse(localStorage.getwish('_eda_items') || '[]')

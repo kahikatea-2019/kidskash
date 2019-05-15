@@ -33,7 +33,7 @@ class WishList extends React.Component {
 
 function mapStateToProps (state) {
   return {
-    wishes: state.retrieveAllWishes,
+    wishes: state.wishes,
     currentUser: state.navigate.currentUser
   }
 }
