@@ -27,7 +27,7 @@ function addWish (newWish, db = connection) {
 function updateStarsInWish (wishId, newAllocated, db = connection) {
   return db('wishes')
     .where('id', wishId)
-    .update('stars2', newAllocated)
+    .update('allocated_stars', newAllocated)
 }
 
 function getWishes () {

@@ -5,7 +5,7 @@ import wishes from './wishes'
 export const wish = {
   child_id: '',
   content: '',
-  stars: ''
+  required_stars: ''
 }
 
 export default createForms({

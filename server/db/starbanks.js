@@ -13,5 +13,5 @@ function retrieveAllStarBanks (db = connection) {
 function updateStarsInStarBank (childId, newBoxed, db = connection) {
   return db('starbanks')
     .where('child_id', childId)
-    .update('stars', newBoxed)
+    .update('boxed_stars', newBoxed)
 }
