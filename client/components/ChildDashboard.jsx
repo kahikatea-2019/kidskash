@@ -5,7 +5,27 @@ import WishList from './WishList'
 import StarBank from './StarBank'
 import WishInput from './WishInput'
 
-export default function ChildDashboard () {
+// import material ui
+
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
+import { props } from 'bluebird'
+//
+
+const styles = theme => ({
+  root: {
+    flexGrow: 1
+  },
+  paper: {
+    padding: theme.spacing.unit * 2,
+    textAlign: 'center',
+    color: theme.palette.text.secondary
+  }
+})
+
+function ChildDashboard (props) {
   const child = {
     id: 1,
     child_name: 'Amy',
@@ -13,21 +33,32 @@ export default function ChildDashboard () {
     parents_id: '1'
   }
 
+  const { classes } = props
+
   return (
     <React.Fragment>
-      <div className="cd-body">
-        <div className="high-frame">
-          <div className="welcome-user">
-            {`Hello, ${child.child_name}!`}
-          </div>
+      <center>
+        <div className={classes.paper}>
+          <Grid container spacing={24}>
+            <div className={classes.paper}>
+              <h1>
+                {`Hello, ${child.child_name}!`}
+              </h1>
+            </div>
+            <div className={classes.paper}>
+              <WishInput/>
+              <WishList id={child.id}/>
+              <StarBank id={child.id}/>
+            </div>
+          </Grid>
         </div>
-        <div className="low-frame">
-          <WishInput/>
-          <WishList id={child.id}/>
-          <StarBank id={child.id}/>
-        </div>
-
-      </div>
+      </center>
     </React.Fragment>
   )
 }
+
+ChildDashboard.propTypes = {
+  classes: PropTypes.object.isRequired
+}
+
+export default withStyles(styles)(ChildDashboard)

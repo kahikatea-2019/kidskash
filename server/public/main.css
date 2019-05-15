@@ -1,4 +1,4 @@
-* {
+/* * {
   border: .2px;
   padding: 10px;
 }
@@ -10,16 +10,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
+} */
 /* ChildDashboard */
-.cd-body {
+/* .cd-body {
   display: flex;
   flex-direction: column;
   width: 1280px;
   margin: 0px auto;
 }
 .high-frame {
-  background-color: rebeccapurple;
+  background-color: rgb(163, 238, 102);
   margin: 0px auto;
   width: 95%;
 }
@@ -31,8 +31,12 @@
   flex-grow: 1;
   justify-content: space-between;
   background-color: lightpink;
+} */
+
+p, h1, h2, h3, h4, h5, h6, title {
+font-family: 'Roboto'; font-size: flex
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-font-family: 'Roboto'; font-size: flex
+.background {
+
 }
