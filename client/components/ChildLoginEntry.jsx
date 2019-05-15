@@ -15,7 +15,6 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
-import { yellow } from '@material-ui/core/colors'
 
 const styles = theme => ({
   icon: {
@@ -79,8 +78,6 @@ const ChildLoginEntry = props => {
 
   return (
     <React.Fragment>
-      <CssBaseline />
-
       <Grid item sm={6} md={4} lg={3}>
         <Link to="#" onClick={trigger}>
           <Card className={classes.card}>
@@ -98,7 +95,6 @@ const ChildLoginEntry = props => {
           </Card>
         </Link>
       </Grid>
-
     </React.Fragment>
   )
 }

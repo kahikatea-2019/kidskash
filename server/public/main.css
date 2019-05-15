@@ -7,6 +7,12 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+/*Background for Login */
+
+.background {
+  background-color:#bbdefb ;
+}
 /* ChildDashboard */
 .cd-body {
   display: flex;
