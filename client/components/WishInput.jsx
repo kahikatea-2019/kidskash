@@ -3,32 +3,6 @@ import { connect } from 'react-redux'
 import { actions, Control, Errors, Form } from 'react-redux-form'
 import { addNewWish } from '../actions/wishes'
 
-// //MaterialUI
-// import PropTypes from 'prop-types';
-// import { withStyles } from '@material-ui/core/styles';
-// import Card from '@material-ui/core/Card';
-// import CardActions from '@material-ui/core/CardActions';
-// import CardContent from '@material-ui/core/CardContent';
-// import Button from '@material-ui/core/Button';
-// import Typography from '@material-ui/core/Typography';
-
-// const styles = {
-//   card: {
-//     minWidth: 275,
-//   }
-//   title: {
-//     fontSize: 14,
-//   }
-//   pos: {
-//     marginBottom: 12,
-//   }
-// }
-
-function SimpleCard (props) {
-  const { classes } = props
-  const bull = <span className={classes.bullet}>•</span>
-}
-
 class WishInput extends React.Component {
   constructor (props) {
     super(props)
@@ -52,16 +26,16 @@ class WishInput extends React.Component {
       <div className= 'wishinput'>
         {/* <h2>Mum/Dad: These are what i want :</h2> */}
         <Form model='wish' onSubmit={this.handleSubmit}>
-          <label><h2>Wish:</h2></label>
+          <label><h2>What will I work towards?</h2></label>
           <Control.text model='.content'
-            className='u-full-width' validateOn='blur'
+            className='u-full-width form-input' validateOn='blur'
             validators={{ isRequired: content => content && content.length }}
           />
           <Errors model=".content" className="error" show='touched'
             messages={{ isRequired: 'Please write  a wish.' }}
           />
           {/* this could be another componment for each star container */}
-          <label><h2>Stars:</h2></label>
+          <label><h2>How much is it worth to me?</h2></label>
           <Control.select model='.required_stars' className='u-full-width'>
             <option value="5">5</option>
             <option value="10">10</option>

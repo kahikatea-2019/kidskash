@@ -1,12 +1,3 @@
-.child-login-entry-frame {
-  display: flex;
-  flex-direction: column;
-}
-.login-frame {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
 
 /*Background for Login */
 
@@ -19,43 +10,104 @@
   flex-direction: column;
   width: 1280px;
   margin: 0px auto;
+
 }
 .high-frame {
   background-color: rgb(228, 241, 104);
   margin: 0px auto;
   width: 95%;
+
 }
 .low-frame {
   display: flex;
+  flex-direction: row;
   margin: 0px auto;
   width: 95%;
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-between;
   background-color: rgb(175, 212, 230);
+ 
 }
+
+.form-input {
+  width: 95%;
+}
+
+.wishinput {
+  width: 99%;
+  border-radius: 25px;
+  
+}
+
+
 
 p, h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto'; font-size: flex
-  }
+}
 
-/* 
-  body {
-    z-index: 5;
-    background: gray url("https://wallpaperfm.com/img/original/d/9/d/42224.jpg") repeat 0 0;
-    width: 100%;
-    height: 1080px;
-    margin: 0;
-    text-align: center;
-    -webkit-animation: slide 10s linear infinite;
-  }
-  
-  body h1 {
-    font-family: sans-serif;
-  }
-  
-  @-webkit-keyframes slide {
-      from { background-position: 0 0; }
-      to { background-position: -400px 0; }
-  }   
-   */
+/* wish & wishlist styling */
+
+.individual-wish-content {
+  border: .5px solid darkblue;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16pt;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+}
+
+.wish-data-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.increment-button {
+  padding: 10px;
+  text-decoration: bold;
+  width: 80px;
+  border-radius: 10px;
+}
+
+.decrement-button {
+  padding: 10px;
+  text-decoration: bold;
+  width: 80px;
+  border-radius: 10px;
+}
+
+.wishlist {
+  width: 60%;
+  border: 1px solid darkblue;
+}
+.starbank {
+  width: 35%;
+  border: 1px solid darkblue;
+}
+
+/* starbank */
+.allocated-stars {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  height: 100%;
+}
+
+.star-image {
+  width: 100px;
+  height: 100px;
+  background-image: url('images/star.png');
+  background-size: cover;   
+}
