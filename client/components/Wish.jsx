@@ -11,7 +11,7 @@ class Wish extends React.Component {
     const newAllocated = allocatedStars + 1
     const newBoxed = boxedStars - 1
 
-    if (newAllocated <= required_stars) {
+    if (newAllocated <= required_stars && boxedStars !== 0) {
       dispatch(updateStars(wishId, newAllocated))
       dispatch(updateStarBanks(childId, newBoxed))
     }
