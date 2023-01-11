@@ -43,7 +43,7 @@
     "@material-ui/icons": "^3.0.2",
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.16.4",
-    "knex": "^0.16.5",
+    "knex": "^2.4.0",
     "material-ui": "^1.0.0-beta.47",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-modal": "^3.8.1",
